@@ -27,7 +27,7 @@ The Pinephone is slow. It uses an Allwinner A64 SOC, which is a quad-core Cortex
 
 # Web Browsing
 
-Web browsing is slow, and the phone can struggle especially with heavy websites. Performance is also affected by the browser used, with Firefox being the slowest and GNOME Web being the fastest. Benchmarking results with [speedometer 3.0](https://browserbench.org/Speedometer3.0/). Based on the table below, you should use either Epiphany or Angelfish for web browsing.
+Web browsing is slow, and the phone can struggle especially with heavy websites. Performance is also affected by the browser used. Based on benchmarking results with [speedometer 3.0](https://browserbench.org/Speedometer3.0/) you should use either Epiphany or Angelfish for web browsing.
 
 | Browser | Score | Toolkit |
 |---------|-------|---------|
