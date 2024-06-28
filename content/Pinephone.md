@@ -19,7 +19,7 @@ series = "Mobile Linux"
 - Camera Support:
     * Libcamera: New support, handles everything in software as there is no ISP
     * Megapixels: Currently the better option, offering decent quality but slow processing due to the phone’s speed and the heavy processing required for raw images
-- Battery Life: Excellent, with many hours of active use and around 3 days on standby
+- Battery Life: Decent, from 2-3.5 hours of active use and around multiple days on standby
 
 # Performance
 
@@ -110,6 +110,22 @@ Megapixels is the better option for now as it offers better quality and more fea
 
 {{ img(src="/images/camera/pinephone/superman_custom_processed.jpg" alt="Superman Custom") }}
 
+
+# Battery Life
+
+Testing was done using the following setup:
+
+- Screen brightness set to 50%
+- Screen timeout disabled
+- Battery life was measured from 95% to device shutdown
+
+
+| Method | Battery Life |
+|--------|--------------|
+| Screen on | 3.71 hours |
+| Livi 720p Video Playback | 3.31 hours |
+| mpv 720p Video Playback | 2.19 hours |
+| stress cpu | 2.12 hours |
 
 # Recommended
 
