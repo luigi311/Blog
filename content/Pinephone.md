@@ -21,6 +21,11 @@ series = "Mobile Linux"
     * Megapixels: Currently the better option, offering decent quality but slow processing due to the phone’s speed and the heavy processing required for raw images
 - Battery Life: Decent, from 2-3.5 hours of active use and around multiple days on standby
 
+# Setup information
+- OS: Danct Archlinux
+- Kerenl: danctnix 6.7.7-1-danctnix
+- DE: Phosh
+
 # Performance
 
 The Pinephone is slow. It uses an Allwinner A64 SOC, which is a quad-core Cortex-A53 processor. This SOC is very old and slow. It comes with 3GB of RAM, which is enough for most tasks. The performance is passable for basic tasks like calling, texting and other light applications but can struggle with heavy applications like web browsers and media playback that doesnt use hardware acceleration.
