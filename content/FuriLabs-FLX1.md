@@ -2,7 +2,7 @@
 title = "Furilabs FLX1"
 description = "Information about the Furilabs FLX1, its features and limitations."
 date = 2024-09-06
-draft = true
+draft = false
 
 [taxonomies]
 tags = ["Phones", "Furilabs", "Halium"]
@@ -118,44 +118,40 @@ Below is a table of different video codecs and their playback performance. Based
 
 The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the camera as a v4l2 device. This allows it to be used by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well. Work is still being done to improve the camera quality and the camera application just went through a major rewrite/redesign.
 
-| Temperature | Kelvin | Led   |
-|-------------|--------|-------|
-| High        | 5000k  | B35AM |
-| Low         | 2500k  | 519A  |
+| Temp | Kelvin | Led   |
+|------|--------|-------|
+| High | 5000k  | B35AM |
+| Low  | 2500k  | 519A  |
 
-## Superman High Temperature High Light
+Pixel 6 no nightsight camera is used as a comparison device
 
-## Superman High Temperature Low Light
+## Superman High Temp High Light
 
-## Superman Low Temperature High Light
+## Superman High Temp Low Light
+
+## Superman Low Temp High Light
 
 | FLX1 | Pixel 6|
 |------|--------|
-| {{ resize_image(path="/images/camera/flx1/superman_519a_2500k_high_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k High Light") }} | {{ resize_image(path="/images/camera/pixel_6/superman_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k High Light") }} |
+| {{ resize_image(path="/images/camera/flx1/superman_519a_2500k_high_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k High Light") }} |  {{ resize_image(path="/images/camera/pixel_6/superman_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k High Light") }} |
 
-## Superman Low Temperature Low Light
+## Superman Low Temp Low Light
 
 | FLX1 | Pixel 6|
 |------|--------|
 | {{ resize_image(path="/images/camera/flx1/superman_519a_2500k_low_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/superman_519a_2500k_low_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k Low Light") }} |
 
-## Colorchecker High Temperature High Light
-FLX1
+## Color High Temp High Light
 
-Pixel 6
+## Color High Temp Low Light
 
-## Colorchecker High Temperature Low Light
-FLX1
-
-Pixel 6
-
-## Colorchecker Low Temperature High Light
+## Color Low Temp High Light
 
 | FLX1 | Pixel 6|
 |------|--------|
 | {{ resize_image(path="/images/camera/flx1/colorchecker_519a_2500k_high_light.jpg", width=480, alt="FLX1 Colorchecker 519A Dedommed 2500k High Light") }} | {{ resize_image(path="/images/camera/pixel_6/colorchecker_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Colorchecker 519A Dedommed 2500k High Light") }} |
 
-## Colorchecker Low Temperature Low Light
+## Color Low Temp Low Light
 
 | FLX1 | Pixel 6|
 |------|--------|
