@@ -16,7 +16,6 @@ env:
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
 
-
 jobs:
   build:
 
@@ -58,6 +57,11 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
+      - name: Replace BASE_URL
+        if: github.event_name == 'push' && github.ref != 'refs/heads/main'
+        run: |
+          # Replace BASE_URL in config.toml
+          sed -i 's|base_url = "https://blog.luigi311.com"|base_url = "https://blog-d.luigi311.com"|' config.toml
       # Build and push Docker image with Buildx (don't push on PR)
       # https://github.com/docker/build-push-action
       - name: Build and push Docker image
