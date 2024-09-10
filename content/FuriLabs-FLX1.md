@@ -133,13 +133,13 @@ Pixel 6 no nightsight camera is used as a comparison device
 
 | FLX1 | Pixel 6|
 |------|--------|
-| {{ resize_image(path="/images/camera/flx1/superman_519a_2500k_high_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k High Light") }} |  {{ resize_image(path="/images/camera/pixel_6/superman_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k High Light") }} |
+| {{ resize_image(path="/images/camera/flx1/flx1_superman_519a_2500k_high_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k High Light") }} |  {{ resize_image(path="/images/camera/pixel_6/pixel_6_superman_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k High Light") }} |
 
 ## Superman Low Temp Low Light
 
 | FLX1 | Pixel 6|
 |------|--------|
-| {{ resize_image(path="/images/camera/flx1/superman_519a_2500k_low_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/superman_519a_2500k_low_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k Low Light") }} |
+| {{ resize_image(path="/images/camera/flx1/flx1_superman_519a_2500k_low_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_superman_519a_2500k_low_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k Low Light") }} |
 
 ## Color High Temp High Light
 
@@ -149,13 +149,13 @@ Pixel 6 no nightsight camera is used as a comparison device
 
 | FLX1 | Pixel 6|
 |------|--------|
-| {{ resize_image(path="/images/camera/flx1/colorchecker_519a_2500k_high_light.jpg", width=480, alt="FLX1 Colorchecker 519A Dedommed 2500k High Light") }} | {{ resize_image(path="/images/camera/pixel_6/colorchecker_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Colorchecker 519A Dedommed 2500k High Light") }} |
+| {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_519a_2500k_high_light.jpg", width=480, alt="FLX1 Colorchecker 519A Dedommed 2500k High Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Colorchecker 519A Dedommed 2500k High Light") }} |
 
 ## Color Low Temp Low Light
 
 | FLX1 | Pixel 6|
 |------|--------|
-| {{ resize_image(path="/images/camera/flx1/colorchecker_519a_2500k_low_light.jpg", width=480, alt="FLX1 Colorchecker 519A Dedommed 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/colorchecker_519a_2500k_low_light.jpg", width=480, alt="Pixel 6 Colorchecker 519A Dedommed 2500k Low Light") }} |
+| {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_519a_2500k_low_light.jpg", width=480, alt="FLX1 Colorchecker 519A Dedommed 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_519a_2500k_low_light.jpg", width=480, alt="Pixel 6 Colorchecker 519A Dedommed 2500k Low Light") }} |
 
 # Battery Life
 
@@ -170,13 +170,13 @@ Testing was done using the following settings:
 
 | Method | Battery Life |
 |--------|--------------|
-| Screen on | |
+| Screen on | 10.54 hours |
 | Screen on + Android | 10 hours | 
 | Livi 720p Video Playback | |
 | mpv 720p Video Playback | |
-| Stress cpu | |
+| Stress cpu | 5.33 hours |
 | Stress cpu + Android | 5.38 hours |
-| Standby | |
+| Standby |  |
 | Standby + Android |  |
 
 # Conclusion
