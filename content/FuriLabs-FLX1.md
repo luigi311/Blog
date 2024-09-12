@@ -126,7 +126,7 @@ The phone does not support libcamera or megapixels like other linux phones. Inst
 | Light | Description |
 |-------|-------------|
 | Medium | Convoy S21B 3rd click pointed at ceiling |
-| Low    | Emisar DW4 Minimum pointed at ceiling |
+| Low    | Emisar DW4 Minimum brightness. Ceiling for superman. Direct at distance for color checker |
 
 ## Superman Normal Temp Medium Light
 
@@ -142,13 +142,13 @@ The phone does not support libcamera or megapixels like other linux phones. Inst
 
 ## Color Normal Temp Medium Light
 
-| FLX1 | Pixel 6| iPhone 12 |
-|------|--------|-----------|
+| FLX1 | Pixel 6 | iPhone 12 |
+|------|---------|-----------|
 | {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_b35am_5000k_medium_light.jpg", width=360, alt="FLX1 Color Checker B35AM 5000k Medium Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_b35am_5000k_medium_light.jpg", width=360, alt="Pixel 6 Color Checker B35AM 5000k Medium Light") }} | {{ resize_image(path="/images/camera/iphone_12/iphone_12_colorchecker_b35am_5000k_medium_light.png", width=360, alt="iPhone 12 Color Checker B35AM 5000k Medium Light") }} |
 
 ## Color Low Temp Low Light
 
-| FLX1 | Pixel 6 (6 seconds) | iPhone 12 (10 seconds) |
+| FLX1 | Pixel 6 | iPhone 12 (3 seconds) |
 |------|---------------------|------------------------|
 | {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_519a_2500k_low_light.jpg", width=360, alt="FLX1 Color Checker 519A 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_519a_2500k_low_light.jpg", width=360, alt="Pixel 6 Color Checker 519A 2500k Low Light") }} | {{ resize_image(path="/images/camera/iphone_12/iphone_12_colorchecker_519a_2500k_low_light.png", width=360, alt="iPhone 12 Color Checker 519A 2500k Low Light") }} |
 
