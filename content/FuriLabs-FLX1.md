@@ -116,46 +116,41 @@ Below is a table of different video codecs and their playback performance. Based
 
 # Camera
 
-The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the camera as a v4l2 device. This allows it to be used by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well. Work is still being done to improve the camera quality and the camera application just went through a major rewrite/redesign.
+The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the camera as a v4l2 device. This allows it to be used by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well. Work is still being done to improve the camera quality and the camera application just went through a major rewrite/redesign. 
 
-| Temp | Kelvin | Led   |
-|------|--------|-------|
-| High | 5000k  | B35AM |
-| Low  | 2500k  | 519A  |
+| Temp   | Kelvin | Led   |
+|--------|--------|-------|
+| Normal | 5000k  | B35AM |
+| Low    | 2500k  | 519A 3500K dedome  |
 
-Pixel 6 no nightsight camera is used as a comparison device
+| Light | Description |
+|-------|-------------|
+| Medium | Convoy S21B 3rd click pointed at ceiling |
+| Low    | Emisar DW4 Minimum pointed at ceiling |
 
-## Superman High Temp High Light
+## Superman Normal Temp Medium Light
 
-## Superman High Temp Low Light
-
-## Superman Low Temp High Light
-
-| FLX1 | Pixel 6|
-|------|--------|
-| {{ resize_image(path="/images/camera/flx1/flx1_superman_519a_2500k_high_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k High Light") }} |  {{ resize_image(path="/images/camera/pixel_6/pixel_6_superman_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k High Light") }} |
+| FLX1 | Pixel 6| iPhone 12 |
+|------|--------|-----------|
+| {{ resize_image(path="/images/camera/flx1/flx1_superman_b35am_5000k_medium_light.jpg", width=360, alt="FLX1 Superman B35AM 5000k Medium Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_superman_b35am_5000k_medium_light.jpg", width=360, alt="Pixel 6 Superman B35AM 5000k Medium Light") }} | {{ resize_image(path="/images/camera/iphone_12/iphone_12_superman_b35am_5000k_medium_light.png", width=360, alt="iPhone 12 Superman B35AM 5000k Medium Light") }} |
 
 ## Superman Low Temp Low Light
 
-| FLX1 | Pixel 6|
-|------|--------|
-| {{ resize_image(path="/images/camera/flx1/flx1_superman_519a_2500k_low_light.jpg", width=480, alt="FLX1 Superman 519A Dedommed 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_superman_519a_2500k_low_light.jpg", width=480, alt="Pixel 6 Superman 519A Dedommed 2500k Low Light") }} |
+| FLX1 | Pixel 6 (6 sec) | iPhone 12 (3 sec) |
+|------|-----------------|-------------------|
+| {{ resize_image(path="/images/camera/flx1/flx1_superman_519a_2500k_low_light.jpg", width=360, alt="FLX1 Superman 519A 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_superman_519a_2500k_low_light.jpg", width=360, alt="Pixel 6 Superman 519A 2500k Low Light") }} | {{ resize_image(path="/images/camera/iphone_12/iphone_12_superman_519a_2500k_low_light.png", width=360, alt="iPhone 12 Superman 519A 2500k Low Light") }} |
 
-## Color High Temp High Light
+## Color Normal Temp Medium Light
 
-## Color High Temp Low Light
-
-## Color Low Temp High Light
-
-| FLX1 | Pixel 6|
-|------|--------|
-| {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_519a_2500k_high_light.jpg", width=480, alt="FLX1 Colorchecker 519A Dedommed 2500k High Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_519a_2500k_high_light.jpg", width=480, alt="Pixel 6 Colorchecker 519A Dedommed 2500k High Light") }} |
+| FLX1 | Pixel 6| iPhone 12 |
+|------|--------|-----------|
+| {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_b35am_5000k_medium_light.jpg", width=360, alt="FLX1 Color Checker B35AM 5000k Medium Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_b35am_5000k_medium_light.jpg", width=360, alt="Pixel 6 Color Checker B35AM 5000k Medium Light") }} | {{ resize_image(path="/images/camera/iphone_12/iphone_12_colorchecker_b35am_5000k_medium_light.png", width=360, alt="iPhone 12 Color Checker B35AM 5000k Medium Light") }} |
 
 ## Color Low Temp Low Light
 
-| FLX1 | Pixel 6|
-|------|--------|
-| {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_519a_2500k_low_light.jpg", width=480, alt="FLX1 Colorchecker 519A Dedommed 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_519a_2500k_low_light.jpg", width=480, alt="Pixel 6 Colorchecker 519A Dedommed 2500k Low Light") }} |
+| FLX1 | Pixel 6 (6 seconds) | iPhone 12 (10 seconds) |
+|------|---------------------|------------------------|
+| {{ resize_image(path="/images/camera/flx1/flx1_colorchecker_519a_2500k_low_light.jpg", width=360, alt="FLX1 Color Checker 519A 2500k Low Light") }} | {{ resize_image(path="/images/camera/pixel_6/pixel_6_colorchecker_519a_2500k_low_light.jpg", width=360, alt="Pixel 6 Color Checker 519A 2500k Low Light") }} | {{ resize_image(path="/images/camera/iphone_12/iphone_12_colorchecker_519a_2500k_low_light.png", width=360, alt="iPhone 12 Color Checker 519A 2500k Low Light") }} |
 
 # Battery Life
 
@@ -176,7 +171,7 @@ Testing was done using the following settings:
 | mpv 720p Video Playback | |
 | Stress cpu | 5.33 hours |
 | Stress cpu + Android | 5.38 hours |
-| Standby |  |
+| Standby | 3.55 Days |
 | Standby + Android |  |
 
 # Conclusion
