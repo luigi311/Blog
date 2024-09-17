@@ -172,7 +172,7 @@ Testing was done using the following settings:
 | Stress cpu | 5.33 hours |
 | Stress cpu + Android | 5.38 hours |
 | Standby | 3.55 Days |
-| Standby + Android |  |
+| Standby + Android | 2.79 Days |
 
 # Conclusion
 
