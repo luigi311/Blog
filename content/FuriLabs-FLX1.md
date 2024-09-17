@@ -1,7 +1,7 @@
 +++
 title = "Furilabs FLX1"
 description = "Information about the Furilabs FLX1, its features and limitations."
-date = 2024-09-06
+date = 2024-09-16
 draft = false
 
 [taxonomies]
