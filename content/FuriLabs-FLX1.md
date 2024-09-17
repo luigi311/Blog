@@ -201,8 +201,7 @@ Testing was done using the following settings:
 |--------|--------------|
 | Screen on | 10.54 hours |
 | Screen on + Android | 10 hours | 
-| Livi 720p Video Playback | |
-| mpv 720p Video Playback | |
+| mpv 720p Video Playback | 6.11 hours |
 | Stress cpu | 5.33 hours |
 | Stress cpu + Android | 5.38 hours |
 | Standby | 3.55 Days |
