@@ -21,6 +21,8 @@ series = "Phones"
     * Libcamera: Not supported
     * Megapixels: Not supported
     * v4l2: Supported
+    * Gstreamer: Supported
+    * Qcamera: Supported
 - Battery Life: 5/5
 
 # Setup information
@@ -149,7 +151,7 @@ Below is a table of different video codecs and their playback performance. Based
 
 # Camera
 
-The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the camera as a v4l2 device. This allows it to be used by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well. Work is still being done to improve the camera quality and the camera application just went through a major rewrite/redesign. 
+The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the cameras bia v4l, gstreamer and qcamera. This allows it to be used universally by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well. Work is still being done to improve the camera quality and the camera application just went through a major rewrite/redesign. 
 
 | Temp   | Kelvin | Led   |
 |--------|--------|-------|
