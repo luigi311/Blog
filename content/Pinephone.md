@@ -23,7 +23,7 @@ series = "Mobile Linux"
 
 # Setup information
 - OS: Danct Archlinux
-- Kerenl: 6.7.7
+- Kernel: 6.7.7
 - DE: Phosh
 
 # Performance
