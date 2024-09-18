@@ -27,7 +27,7 @@ series = "Phones"
 
 # Setup information
 - OS: FuriOS 13.0.3
-- Kerenl: 4.19.233
+- Kernel: 4.19.233
 - DE: Phosh
 
 
