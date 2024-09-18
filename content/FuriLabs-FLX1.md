@@ -27,7 +27,7 @@ series = "Phones"
 
 # Setup information
 - OS: FuriOS 13.0.3
-- Kerenl: 4.19.191
+- Kerenl: 4.19.233
 - DE: Phosh
 
 
@@ -43,7 +43,7 @@ The FLX1 is a halium based device so it is limiting to what OS/DE you can run on
 
 # Android
 
-Android support is amazing with lots of sensors passed through to the container, listed below. While Waydroid was used a base, it has been heavily modified to improve the experience and has deviating massively from waydroid so I will just adress it as Android Container. You should be able to run most android applications without any issues, including games. Currently video playback is broken, but there is already a patch avaliable that fixes most issues and I can confirm Grayjay works. Android also integrated perfectly with the rest of the OS. All your android applications show up in the app drawer. Theres a android section in the phosh settings that exposes a lot of android settings to the user, image below though is current being reworked.
+Android support is amazing with lots of sensors passed through to the container, listed below. While Waydroid was used a base, it has been heavily modified to improve the experience and has deviating massively from waydroid so I will just adress it as Android Container. You should be able to run most android applications without any issues, including games. Currently video playback is broken, but there is already a patch avaliable that fixes most issues and I can confirm Grayjay works. Android also integrated perfectly with the rest of the OS. All your android applications show up in the app drawer. Theres a android section in the phosh settings that exposes a lot of android settings to the user. The current implementation of the settings panel (as shown below) is going through a redesign.
 
 {{ resize_image(path="/images/misc/furios/android_settings.png", width=480, alt="FuriOS Android Settings") }}
 
@@ -57,6 +57,7 @@ Android support is amazing with lots of sensors passed through to the container,
 | Bluetooth           | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
 | Modem               | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
 | NFC                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Fingerprint Sensor  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Accelerometer       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Geomagnetic         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Orientation         | {{ img(src="/icons/cross.svg" alt="No")}} |
@@ -151,7 +152,7 @@ Below is a table of different video codecs and their playback performance. Based
 
 # Camera
 
-The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the cameras bia v4l, gstreamer and qcamera. This allows it to be used universally by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well. Work is still being done to improve the camera quality and the camera application just went through a major rewrite/redesign. 
+The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the cameras out via v4l, gstreamer and qcamera. This allows it to be used universally by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well.
 
 | Temp   | Kelvin | Led   |
 |--------|--------|-------|
