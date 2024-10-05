@@ -12,7 +12,7 @@ toc = true
 series = "Mobile Linux"
 +++
 
-# Phosh
+# Phosh / Gnome Mobile
 
 ## Contacts
 
