@@ -8,7 +8,7 @@ draft = false
 tags = ["Phones", "Pine64", "Downstream", "Mobile Linux"]
 [extra]
 toc = true
-series = "Mobile Linux"
+series = "Phones"
 +++
 
 - Performance: 1/5

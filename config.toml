@@ -12,7 +12,7 @@ default_language = "en"
 compile_sass = true
 minify_html = false
 build_search_index = true
-generate_feed = true
+generate_feeds = true
 taxonomies = [
     {name = "tags", feed = true},
 ]
@@ -200,7 +200,7 @@ webmanifest = "manifest.min.json" # Required for PWAs
 ###############################################################################
 
 pwa = true # true to load the service worker
-pwa_VER = '3.11.0' # Service Worker cache version. (increment if you need to force a new cache)
+pwa_VER = '3.12.0' # Service Worker cache version. (increment if you need to force a new cache)
 
 ### 3600=1hour, 28800=8hours, 86400=1day, 604800=1week, 1209600=2weeks
 pwa_NORM_TTL = 0 #  86400 is reasonable. html, json, xml, anything else undefined

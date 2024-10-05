@@ -5,9 +5,9 @@ date = 2024-09-16
 draft = false
 
 [taxonomies]
-tags = ["Phones", "Furilabs", "Halium"]
+tags = ["Phones", "Furilabs", "Halium", "Mobile Linux"]
 [extra]
-keywords = "Phones, Markdown, Furilabs, Halium"
+keywords = "Phones, Markdown, Furilabs, Halium, Mobile Linux"
 toc = true
 series = "Phones"
 +++
