@@ -1,13 +1,13 @@
 +++
-title = "Migrate to Mobile Linux"
-description = "Information about how to migrate to mobile linux"
+title = "Migrate to Mobile Linux Guide"
+description = "Guide on how to migrate to mobile linux"
 date = 2024-10-05
 draft = false
 
 [taxonomies]
-tags = ["Mobile Linux", "Android", "Migrate"]
+tags = ["Mobile Linux", "Android", "IOS", "Guide"]
 [extra]
-keywords = "Mobile Linux, Android, Migrate"
+keywords = "Mobile Linux, Android, IOS, Guide"
 toc = true
 series = "Mobile Linux"
 +++
