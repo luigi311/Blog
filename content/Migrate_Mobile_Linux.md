@@ -12,6 +12,8 @@ toc = true
 series = "Mobile Linux"
 +++
 
+This is a guide on how to migrate from Android/IOS to Mobile Linux. Sections are broken down by Desktop Enviornment since that has an affect on what you have access to and what apps are expecting.
+
 # Phosh / Gnome Mobile
 
 ## Contacts
