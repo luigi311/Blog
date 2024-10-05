@@ -1,0 +1,117 @@
++++
+title = "Migrate to Mobile Linux"
+description = "Information about how to migrate to mobile linux"
+date = 2024-10-05
+draft = false
+
+[taxonomies]
+tags = ["Mobile Linux", "Android", "Migrate"]
+[extra]
+keywords = "Mobile Linux, Android, Migrate"
+toc = true
+series = "Mobile Linux"
++++
+
+# Phosh
+
+## Contacts
+
+App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts)
+
+### Google / Nextcloud / WebDAV
+
+##### Untested ######
+
+- Mobile Linux Phone
+    1. Open Settings
+    2. Tap on Online Accounts
+    3. Tap on service provider and fill in information
+    4. Open Contacts app and it should start populating
+
+### Manually
+
+#### Android
+
+- Android Phone
+    1. Open Contacts app
+    2. Tap on Organize tab on the bottom right corner
+    3. Scroll to the bottom and tap on "Export to file"
+    4. Select a folder and name and tap on SAVE
+    5. Transfer the new contacts vcf file to your new device
+
+- Mobile Linux Phone
+    1. On the new device open the Contacts app
+    2. Tap the menu icon on the top right corner
+    3. Tap on "Import From File..."
+    4. Locate the contact vcf file you transfered and tap on it so its highlighted
+    5. Tap on Import on the top right corner
+    6. Tap on Import on the top right corner again
+    7. All your contacts should be imported now
+
+
+#### IOS
+
+
+
+
+---
+
+## Calendar
+
+App: [Calendar by The GNOME Project](https://flathub.org/apps/org.gnome.Calendar)
+
+### Google / Nextcloud / WebDAV
+
+##### Untested ######
+
+- Mobile Linux Phone
+    1. Open Settings
+    2. Tap on Online Accounts
+    3. Tap on service provider and fill in information
+    4. Open the Calendar App and it should start populating the events
+
+
+### Manual
+
+#### Android
+
+There is no way to export your local only calendar from the google calendar app. You will need to sync it to your google account so you can export it from the web calendar.
+
+- Computer
+    1. Open the website [https://calendar.google.com](https://calendar.google.com)
+    2. Click the Settings gear icon on the top right corner
+    3. Click on Settings
+    4. Click on "Import & Export" on the left menu
+    5. Click on the "Export" button
+    6. Extract the Zip file that gets downloaded to your machine
+    7. Transfer the ics calendar file that you just extracted to your new device
+
+- Mobile Linux Phone
+    1. Open Calendar app
+    2. Tap on the "Calendars" 
+    3. Tap on "Manage Calendars..." from the drop down menu
+    4. Tap on "Add Calendar..."
+    5. Provide a name and color for your new calendar
+    6. Tap on "Open a File"
+    7. Tap on the transfered ics calendar file
+    8. Tap on Open on the top right corner
+    9. All your calendar events should be imported now
+
+
+#### IOS
+
+---
+
+
+## Email
+
+App: [Geary by Geary Development Team](https://flathub.org/apps/org.gnome.Geary)
+
+### Google / Microsoft / IMAP / SMTP
+
+- Mobile Linux Phone
+    1. Open Settings
+    2. Tap on Online Accounts
+    3. Tap on service provider and fill in information
+    4. Open Geary and it should detect your email account and start syncing
+
