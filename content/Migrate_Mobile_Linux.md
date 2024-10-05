@@ -91,6 +91,9 @@ App: [Geary by Geary Development Team](https://flathub.org/apps/org.gnome.Geary)
 
 ---
 
+<br>
+<br>
+
 # Manual Exports
 
 ## Contacts
