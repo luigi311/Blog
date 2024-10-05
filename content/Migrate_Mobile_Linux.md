@@ -22,7 +22,7 @@ App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts
 
 ### Google / Nextcloud / WebDAV
 
-##### Untested ######
+##### UNTESTED #####
 
 - Mobile Linux Phone
     1. Open Settings
@@ -30,7 +30,7 @@ App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts
     3. Tap on service provider and fill in information
     4. Open Contacts app and it should start populating
 
-### Manually
+### Manual
 
 #### Android
 
@@ -41,6 +41,20 @@ App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts
     4. Select a folder and name and tap on SAVE
     5. Transfer the new contacts vcf file to your mobile linux device
 
+#### IOS
+
+- iPhone
+    1. Open Contacts app
+    2. Tap on Lists in the top left corner
+    3. Press and Hold the group that you want
+    4. Tap on Export in the popup menu
+    5. Select the desired fields or tap "Select All Fields" at the bottom
+    6. Tap on Done in the top right corner
+    7. Save the contact card file somewhere
+    8. Transfer the new contact vcf file to your mobile linux device
+
+#### Import
+
 - Mobile Linux Phone
     1. Open the Contacts app
     2. Tap the menu icon on the top right corner
@@ -50,12 +64,6 @@ App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts
     6. Tap on Import on the top right corner again
     7. All your contacts should be imported now
 
-
-#### IOS
-
-
-
-
 ---
 
 ## Calendar
@@ -64,7 +72,7 @@ App: [Calendar by The GNOME Project](https://flathub.org/apps/org.gnome.Calendar
 
 ### Google / Nextcloud / WebDAV
 
-##### Untested ######
+##### UNTESTED #####
 
 - Mobile Linux Phone
     1. Open Settings
@@ -79,6 +87,9 @@ App: [Calendar by The GNOME Project](https://flathub.org/apps/org.gnome.Calendar
 
 There is no way to export your local only calendar from the google calendar app. You will need to sync it to your google account so you can export it from the web calendar.
 
+- Android Phone
+    1. Sync your calendar with your google account
+
 - Computer
     1. Open the website [https://calendar.google.com](https://calendar.google.com)
     2. Click the Settings gear icon on the top right corner
@@ -87,6 +98,28 @@ There is no way to export your local only calendar from the google calendar app.
     5. Click on the "Export" button
     6. Extract the Zip file that gets downloaded to your machine
     7. Transfer the ics calendar file that you just extracted to your mobile linux device
+
+
+#### IOS
+
+##### UNTESTED #####
+
+Like android there is no way to export the calendar out of an iPhone locally. I have no way to verify but I did find a workaround online by utilizing icloud. [Workaround discussion](https://discussions.apple.com/thread/8370609?sortBy=rank)
+
+- iPhone
+    1. Sync your calendar with your iCloud account
+
+- Computer
+    1. Open the website [https://www.icloud.com/](https://www.icloud.com/)
+    2. Login to your iCloud account
+    3. Click on the Calendar icon
+    4. In the left panel click on Share Calendar button
+    5. On the popup tick the "Public Calendar" option and copy the url
+    6. Paste the url into the browser and change webcal to http in the url
+    7. Rename the downloaded file to calendar.ics
+    8. Transfer the new calendar.ics file to your mobile linux device
+
+#### Import
 
 - Mobile Linux Phone
     1. Open Calendar app
@@ -99,11 +132,7 @@ There is no way to export your local only calendar from the google calendar app.
     8. Tap on Open on the top right corner
     9. All your calendar events should be imported now
 
-
-#### IOS
-
 ---
-
 
 ## Email
 
@@ -116,4 +145,3 @@ App: [Geary by Geary Development Team](https://flathub.org/apps/org.gnome.Geary)
     2. Tap on Online Accounts
     3. Tap on service provider and fill in information
     4. Open Geary and it should detect your email account and start syncing
-
