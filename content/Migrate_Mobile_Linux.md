@@ -37,10 +37,10 @@ App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts
     2. Tap on Organize tab on the bottom right corner
     3. Scroll to the bottom and tap on "Export to file"
     4. Select a folder and name and tap on SAVE
-    5. Transfer the new contacts vcf file to your new device
+    5. Transfer the new contacts vcf file to your mobile linux device
 
 - Mobile Linux Phone
-    1. On the new device open the Contacts app
+    1. Open the Contacts app
     2. Tap the menu icon on the top right corner
     3. Tap on "Import From File..."
     4. Locate the contact vcf file you transfered and tap on it so its highlighted
@@ -84,7 +84,7 @@ There is no way to export your local only calendar from the google calendar app.
     4. Click on "Import & Export" on the left menu
     5. Click on the "Export" button
     6. Extract the Zip file that gets downloaded to your machine
-    7. Transfer the ics calendar file that you just extracted to your new device
+    7. Transfer the ics calendar file that you just extracted to your mobile linux device
 
 - Mobile Linux Phone
     1. Open Calendar app
