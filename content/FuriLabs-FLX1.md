@@ -38,7 +38,7 @@ The FLX1 is a fast phone in general. The Mediatek Dimensity 900 is a fast SOC es
 
 # Compatibility
 
-The FLX1 is a halium based device so it is limiting to what OS/DE you can run on it. Currently FuriOS is the only supported OS, but someone can create a port for UT. You wont be able to run any of the other mainline OS though like arch and postmarketos. For desktop environments (DE) you are also limited to Phosh and Lomiri. Plasma mobile has a fork that someone was able to get it working on droidian devices but it is not officially supported. Every app that I've tested so far was launched and worked correctly, bearing the HW acceleration issues.
+The FLX1 is a halium based device so it is limiting to what OS/DE you can run on it. Currently FuriOS is the only supported OS, but someone can create a port for UT. You wont be able to run any of the other mainline OS though like arch and postmarketos. For desktop environments (DE) you are also limited to Phosh and potentially Lomiri, assuming UT is ported by a 3rd party. Plasma mobile also has a fork that someone was able to get it working on droidian devices but it is not officially supported and stuck on plasma mobile 5. Every app that I've tested so far was launched and worked correctly, bearing the HW acceleration issues.
 
 
 # Android
