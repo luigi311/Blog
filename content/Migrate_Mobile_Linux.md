@@ -14,6 +14,8 @@ series = "Mobile Linux"
 
 This is a guide on how to migrate from Android/IOS to Mobile Linux. Sections are broken down by Desktop Enviornment since that has an affect on what you have access to and what apps are expecting.
 
+<br>
+
 # Phosh / Gnome Mobile
 
 ## Contacts
@@ -87,7 +89,68 @@ App: [Geary by Geary Development Team](https://flathub.org/apps/org.gnome.Geary)
 3. Tap on service provider and fill in information
 4. Open Geary and it should detect your email account and start syncing
 
+
 ---
+
+
+<br>
+<br>
+
+# Plasma Mobile 6
+
+## Contacts
+
+App: [Phonebook by Plasma Mobile](https://apps.kde.org/phonebook)
+
+### Manual Import
+
+1. Open Phonebook
+2. Tap on the 3 dots on the top right corner
+3. Tap on Import contacts
+4. Locate the contact vcf file you transfered and tap on it
+5. All your contacts should be imported now
+
+
+---
+
+
+## Calendar
+
+App: [Calindori by Plasma Mobile](https://apps.kde.org/calindori)
+
+### Manual Import
+
+1. Open Calindori
+2. Tap on the Hamburger Menu button on the top left corner
+3. Tap on Settings
+4. Tap on Manage internal calendars
+5. Tap on personal
+    - If it does not exist then create a calendar
+6. Tap on Import calendar file
+7. Tap on the transfered ics calendar file
+8. Tap on Proceed at the bottom to confirm to add your events
+9. It should say import completed successfully in green at the bottom
+10. All your calendar events should be imported now
+
+
+---
+
+
+## Email
+
+App: [Geary by Geary Development Team](https://flathub.org/apps/org.gnome.Geary)
+
+### Google / Microsoft / IMAP / SMTP
+
+1. Open Geary
+2. Tap on Add on the top left corner
+3. Fill in Name and Email address
+4. It should auto detect the method based on your email address
+5. Fill out any of the information it asks for and make sure its correct
+
+
+---
+
 
 <br>
 <br>
