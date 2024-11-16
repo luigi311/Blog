@@ -24,22 +24,22 @@ App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts
 
 ##### UNTESTED #####
 
-- Mobile Linux Phone
-    1. Open Settings
-    2. Tap on Online Accounts
-    3. Tap on service provider and fill in information
-    4. Open Contacts app and it should start populating
+1. Open Settings
+2. Tap on Online Accounts
+3. Tap on service provider and fill in information
+4. Open Contacts app and it should start populating
+
+<br>
 
 ### Manual Import
 
-- Mobile Linux Phone
-    1. Open the Contacts app
-    2. Tap the menu icon on the top right corner
-    3. Tap on "Import From File..."
-    4. Locate the contact vcf file you transfered and tap on it so its highlighted
-    5. Tap on Import on the top right corner
-    6. Tap on Import on the top right corner again
-    7. All your contacts should be imported now
+1. Open the Contacts app
+2. Tap the menu icon on the top right corner
+3. Tap on "Import From File..."
+4. Locate the contact vcf file you transfered and tap on it so its highlighted
+5. Tap on Import on the top right corner
+6. Tap on Import on the top right corner again
+7. All your contacts should be imported now
 
 
 ---
@@ -53,25 +53,24 @@ App: [Calendar by The GNOME Project](https://flathub.org/apps/org.gnome.Calendar
 
 ##### UNTESTED #####
 
-- Mobile Linux Phone
-    1. Open Settings
-    2. Tap on Online Accounts
-    3. Tap on service provider and fill in information
-    4. Open the Calendar App and it should start populating the events
+1. Open Settings
+2. Tap on Online Accounts
+3. Tap on service provider and fill in information
+4. Open the Calendar App and it should start populating the events
 
+<br>
 
 ### Manual Import
 
-- Mobile Linux Phone
-    1. Open Calendar app
-    2. Tap on the "Calendars" 
-    3. Tap on "Manage Calendars..." from the drop down menu
-    4. Tap on "Add Calendar..."
-    5. Provide a name and color for your new calendar
-    6. Tap on "Open a File"
-    7. Tap on the transfered ics calendar file
-    8. Tap on Open on the top right corner
-    9. All your calendar events should be imported now
+1. Open Calendar app
+2. Tap on the "Calendars" 
+3. Tap on "Manage Calendars..." from the drop down menu
+4. Tap on "Add Calendar..."
+5. Provide a name and color for your new calendar
+6. Tap on "Open a File"
+7. Tap on the transfered ics calendar file
+8. Tap on Open on the top right corner
+9. All your calendar events should be imported now
 
 
 ---
@@ -83,11 +82,10 @@ App: [Geary by Geary Development Team](https://flathub.org/apps/org.gnome.Geary)
 
 ### Google / Microsoft / IMAP / SMTP
 
-- Mobile Linux Phone
-    1. Open Settings
-    2. Tap on Online Accounts
-    3. Tap on service provider and fill in information
-    4. Open Geary and it should detect your email account and start syncing
+1. Open Settings
+2. Tap on Online Accounts
+3. Tap on service provider and fill in information
+4. Open Geary and it should detect your email account and start syncing
 
 ---
 
