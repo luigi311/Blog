@@ -45,7 +45,7 @@ App: [Contacts by The GNOME Project](https://flathub.org/apps/org.gnome.Contacts
 
 
 ---
-
+<br>
 
 ## Calendar
 
@@ -76,7 +76,7 @@ App: [Calendar by The GNOME Project](https://flathub.org/apps/org.gnome.Calendar
 
 
 ---
-
+<br>
 
 ## Email
 
@@ -112,7 +112,7 @@ App: [Phonebook by Plasma Mobile](https://apps.kde.org/phonebook)
 
 
 ---
-
+<br>
 
 ## Calendar
 
@@ -134,7 +134,7 @@ App: [Calindori by Plasma Mobile](https://apps.kde.org/calindori)
 
 
 ---
-
+<br>
 
 ## Email
 
@@ -182,7 +182,7 @@ App: [Geary by Geary Development Team](https://flathub.org/apps/org.gnome.Geary)
 
 
 ---
-
+<br>
 
 ## Calendar
 
