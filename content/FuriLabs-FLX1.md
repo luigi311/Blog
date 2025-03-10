@@ -1,7 +1,7 @@
 +++
 title = "Furilabs FLX1"
 description = "Information about the Furilabs FLX1, its features and limitations."
-date = 2024-09-16
+date = 2025-03-09
 draft = false
 
 [taxonomies]
@@ -26,24 +26,24 @@ series = "Phones"
 - Battery Life: 5/5
 
 # Setup information
-- OS: FuriOS 13.0.3
-- Kernel: 4.19.233
+- OS: FuriOS 13.0.8
+- Kernel: 4.19.325
 - DE: Phosh
 
 
 # Performance
 
-The FLX1 is a fast phone in general. The Mediatek Dimensity 900 is a fast SOC especially compared to the pinephone/pinephone pro/librem 5 devices. It comes with 6GB of RAM , which is more than enough for most tasks but can be limiting. Web browsing and media playback are fast and smooth. Android container is fully supported so acceleration works well and the performance is great. There are some acceleration issues with flatpak qt6 based applications, so they are set to software rendering. Flatpak qt5/gtk4 and native qt5/qt6/gtk4 are all accelerated without issues.
+The FLX1 is a fast phone in general. The Mediatek Dimensity 900 is a fast SOC especially compared to the pinephone/pinephone pro/librem 5 devices. It comes with 6GB of RAM , which is more than enough for most tasks but can be limiting. Web browsing and media playback are fast and smooth. Android container is fully supported with acceleration working well and the performance is great. There are some acceleration issues with flatpak qt6 based applications. Flatpak qt5/gtk4 and native qt5/qt6/gtk4 are all accelerated without issues.
 
 
 # Compatibility
 
-The FLX1 is a halium based device so it is limiting to what OS/DE you can run on it. Currently FuriOS is the only supported OS, but someone can create a port for UT. You wont be able to run any of the other mainline OS though like arch and postmarketos. For desktop environments (DE) you are also limited to Phosh and potentially Lomiri, assuming UT is ported by a 3rd party. Plasma mobile also has a fork that someone was able to get it working on droidian devices but it is not officially supported and stuck on plasma mobile 5. Every app that I've tested so far was launched and worked correctly, bearing the HW acceleration issues.
+The FLX1 is a halium based device so it is limiting to what OS/DE you can run on it. Currently FuriOS is the only supported OS, but there exists a WIP Ubuntu Touch port. You wont be able to run any of the other mainline OS though like arch and postmarketos. For desktop environments (DE) you are also limited to Phosh in FuriOS and Lomiri in the Ubuntu Touch port. GTK based applications seem to function the best while some QT based applications have issues such as acceleration and/or failing to launch like angelfish.
 
 
 # Android
 
-Android support is amazing with lots of sensors passed through to the container, listed below. While Waydroid was used a base, it has been heavily modified to improve the experience and has deviating massively from waydroid so I will just adress it as Android Container. You should be able to run most android applications without any issues, including games. Currently video playback is broken, but there is already a patch avaliable that fixes most issues and I can confirm Grayjay works. Android also integrated perfectly with the rest of the OS. All your android applications show up in the app drawer. Theres a android section in the phosh settings that exposes a lot of android settings to the user. The current implementation of the settings panel (as shown below) is going through a redesign.
+Android support is amazing with lots of sensors passed through to the container, listed below. While Waydroid was used a base, it has been heavily modified to improve the experience and has deviated massively from upstream waydroid so I will just adress it as Android Container. You should be able to run most android applications without any issues except the usually culprits like some bank applications. Video playback works and I can confirm Grayjay works perfectly except the volume control guesture. Android also integrated perfectly with the rest of the OS with all your android applications showing up in the app drawer. There is a gnome software plugin so you can search and install android apps through gnome software store as if it was a native application removing the need to open fdroid. There's a android section in the phosh settings that exposes a lot of android settings to the user as shown below.
 
 {{ resize_image(path="/images/misc/furios/android_settings.png", width=480, alt="FuriOS Android Settings") }}
 
@@ -54,8 +54,8 @@ Android support is amazing with lots of sensors passed through to the container,
 | GPS                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Cameras             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Microphone          | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Bluetooth           | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
-| Modem               | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
+| Bluetooth           | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Modem               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | NFC                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Fingerprint Sensor  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Accelerometer       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
@@ -76,18 +76,18 @@ Android support is amazing with lots of sensors passed through to the container,
 
 # Docking
 
-The FLX1 isn't currently able to output video via the usb c port due to the lack of hardware support. They are currently working on a wireless solution like what UT has with Miracast. This would limit you to only using Miracast compatible devices such as the Nexdock Wireless or using a Miracast dongle. This is still not available yet though so only time will tell how well it works.
+The FLX1 docking is in a weird position as the hardware does not support usb dp-alt mode but they are still able to utilize evdi to get video rendering externally. They are also wireless solution like what UT has with Miracast that can be implemented in the future.This is still not available yet though so only time will tell how well it works and how universal these options are.
 
 
 # Web Browsing
 
-Web browsing works really well and I haven't ran into any issues with firefox yet. Firefox is a custom build that they maintain internal with improvements to performance and scaling to make it more mobile friendly. Due to it being a custom build it is possible for it to fall behind a few releases due to issues in new releases but so far they are on top of it and the changes are amazing. Based on benchmarking results with [speedometer 3.0](https://browserbench.org/Speedometer3.0/) either firefox or epiphany work but I would recommend firefox. Angelfish doesn't work at all.
+Web browsing works really well. Firefox is a custom build that they maintain internal with improvements to performance and scaling to make it more mobile friendly. Due to it being a custom build it is possible for it to fall behind a few releases due to diffs in new releases but so far they are on top of it and the changes are amazing. Benchmarking results with [speedometer 3.0](https://browserbench.org/Speedometer3.0/) are below but I would recommend sticking with firefox. Angelfish does not launch at all.
 
-| Browser | Score | Version | Toolkit | Method |
+| Browser | Score | Version | Toolkit | Install Method |
 |---------|-------|---------|---------|--------|
-| Firefox | 2.28 &plusmn; 0.17 | 128.0.3 | Gecko   | Repo |
-| Angelfish | N/A | 24.08.0 | Chromium | Flatpak |
-| Epiphany | 2.12 &plusmn; 0.054 | 46.3 | WebKit | Flatpak |
+| Firefox | 2.77 &plusmn; 0.060 | 135.0.1 | Gecko   | Repo |
+| Angelfish | N/A | 24.12.3 | Chromium | Flatpak |
+| Epiphany | 1.46 &plusmn; 0.030 | 47.3.1 | WebKit | Flatpak |
 
 
 # Media Playback
@@ -98,9 +98,9 @@ Below is a table of different video codecs and their playback performance. Based
 
 | Player | Version | Method |
 |--------|---------|--------|
-| MPV    | 0.38.0  | Repo |
+| MPV    | 0.39.0  | Repo |
 | Clapper | 0.6.1  | Flatpak |
-| Livi | 0.2.0  | Flatpak |
+| Livi | 0.3.1  | Flatpak |
 
 ### H.264/AVC
 
@@ -152,7 +152,7 @@ Below is a table of different video codecs and their playback performance. Based
 
 # Camera
 
-The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the cameras out via v4l, gstreamer and qcamera. This allows it to be used universally by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well.
+The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the cameras out via v4l, gstreamer and qcamera. This allows it to be used universally by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up almost instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well.
 
 | Temp   | Kelvin | Led   |
 |--------|--------|-------|
@@ -191,24 +191,26 @@ The phone does not support libcamera or megapixels like other linux phones. Inst
 
 # Battery Life
 
-The phone has great battery life with the screen on and on standby. Standby is also different from the mainline devices as it does not use deep sleep. Instead it uses a low power mode that still allows network activity. This allows you to ssh in at anytime and continue to receive notifications from web based apps.
+The phone has amazing battery life with the screen on and on standby. Standby is also different from the mainline devices as it does not use deep sleep. Instead it uses a low power mode that still allows network activity. This allows you to ssh in at anytime and continue to receive notifications from web based apps.
 
 Testing was done using the following settings:
 
 - Screen brightness set to 50%
 - Screen timeout disabled
-- Measured from 100% battery to device shutdown
+- Measured from 100% battery to device shutdown except for standby
 - With and without android running in the background
+- With sim unless otherwise specified
 
 | Method | Battery Life |
 |--------|--------------|
-| Screen on | 10.54 hours |
-| Screen on + Android | 10 hours | 
-| mpv 720p Video Playback | 6.11 hours |
-| Stress cpu | 5.33 hours |
-| Stress cpu + Android | 5.38 hours |
-| Standby | 3.55 Days |
-| Standby + Android | 2.79 Days |
+| Screen on |  |
+| Screen on + Android | |
+| mpv 720p Video Playback |  |
+| Stress cpu |  |
+| Standby |  |
+| Standby without sim |   |
+| Standby + Android |  |
+| Standby + Android without sim |  |
 
 
 # Support
