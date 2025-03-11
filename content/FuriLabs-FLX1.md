@@ -198,19 +198,18 @@ Testing was done using the following settings:
 - Screen brightness set to 50%
 - Screen timeout disabled
 - Measured from 100% battery to device shutdown except for standby
-- With and without android running in the background
-- With sim unless otherwise specified
+- Without android unless specified
+- With sim unless specified
 
 | Method | Battery Life |
 |--------|--------------|
-| Screen on |  |
-| Screen on + Android | |
+| Screen on | 9.5 hours |
+| Screen on + Android | 9 hours |
 | mpv 720p Video Playback |  |
 | Stress cpu |  |
 | Standby |  |
 | Standby without sim |   |
 | Standby + Android |  |
-| Standby + Android without sim |  |
 
 
 # Support
