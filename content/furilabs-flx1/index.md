@@ -42,14 +42,14 @@ series = "Phones"
 | Proximity             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | NPU                   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
-¹ Not hardware but important usability feature and is optional  
+¹ Not hardware but important usability feature and is optional
 ² Bluetooth is working but uses bluez and that seems to have difficulty connecting to some devices
 
 Some hardware is a grouping as those are all functions handled by a single sensor on the device and exposed as different metrics.
 
 # Cell Service
 
-Cell service was tested in the US utilizing US Mobile MVNO, [referral link](https://www.usmobile.com/referrals?referrer=0178DFD2&name=Luis&utm_campaign=monster_referral), as it allows for easy testing of the 3 major US network providers. The only downside is the TMobile service has deprioritized download speeds so your speeds can be on the slower side like mine based on location and network traffic. Download/Upload speed tests were done using ookla [speedtest.net](https://speedtest.net) and netflix [fast.com](https://fast.com) with the data waster option enabled. As service seems to vary from moment to moment, I ran multiple tests and grabbed the best results for each section. Light Speed (Tmobile) seems to work perfectly without any issues, while the FLX1 does support the bands for 5g, the 5g connection in the US seems to be unstable and causes issues. In my case with the 5g bands enabled, the phone would no longer connect to service so I had to stay on the 4g network. I have seen reports that lots of people outside the US use 5g without any issues. I've attempted Dark Star (AT&T) and ran into issues getting a complete connection, data wasnt working but was able to make calls and text. 
+Cell service was tested in the US utilizing US Mobile MVNO, [referral link](https://www.usmobile.com/referrals?referrer=0178DFD2&name=Luis&utm_campaign=monster_referral), as it allows for easy testing of the 3 major US network providers. The only downside is the TMobile service has deprioritized download speeds so your speeds can be on the slower side like mine based on location and network traffic. Download/Upload speed tests were done using ookla [speedtest.net](https://speedtest.net) and netflix [fast.com](https://fast.com) with the data waster option enabled. As service seems to vary from moment to moment, I ran multiple tests and grabbed the best results for each section. Light Speed (Tmobile) seems to work perfectly without any issues, while the FLX1 does support the bands for 5g, the 5g connection in the US seems to be unstable and causes issues. In my case with the 5g bands enabled, the phone would no longer connect to service so I had to stay on the 4g network. I have seen reports that lots of people outside the US use 5g without any issues. I've attempted Dark Star (AT&T) and ran into issues getting a complete connection, data wasnt working but was able to make calls and text.
 
 I also put in my JMP.Chat eSIM with their data plan and while the phosh settings says AT&T, speedtest says its T-Mobile and I dont have a reliable way to validate it since they route it so you come out of Poland for privacy reasons. The eSIM works on my FLX1 and even has a built in way to change profiles and add new profiles, it is clunky but it is enough to get the job done. It does not work with [eSIM Manager](https://codeberg.org/lucaweiss/lpa-gtk), hopefully it will in the future or the build in app is improved.
 
@@ -106,7 +106,7 @@ Tested using [Sensors Toolbox](https://play.google.com/store/apps/details?id=com
 | Pressure            | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Proximity           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Gravity             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Linear Acceleration | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | 
+| Linear Acceleration | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Rotation Vector     | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Step Counter        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
@@ -148,7 +148,7 @@ Below is a table of different video codecs and their playback performance. The h
 ### H.264/AVC
 
 | Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------| 
+|-----------|-------------|------------|
 | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Livi      | {{ img(src="/icons/cross.svg" alt="No")}}             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
@@ -160,7 +160,7 @@ Below is a table of different video codecs and their playback performance. The h
 ### H.265/HEVC
 
 | Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------| 
+|-----------|-------------|------------|
 | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Livi ¹     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}}            |
@@ -174,7 +174,7 @@ Below is a table of different video codecs and their playback performance. The h
 ### AV1
 
 | Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------| 
+|-----------|-------------|------------|
 | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
@@ -186,7 +186,7 @@ Below is a table of different video codecs and their playback performance. The h
 ### VP9
 
 | Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------| 
+|-----------|-------------|------------|
 | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
@@ -199,7 +199,7 @@ Below is a table of different video codecs and their playback performance. The h
 
 The phone does not support libcamera and megapixels like mainline linux phones. Instead it has it's own camera stack and exposes the cameras out via v4l, gstreamer, qcamera and pipewire. This allows it to be used universally by other applications. For example for video chatting through firefox. The camera quality is really good and the processing is instant as it's using the mediatek isp. The camera application also opens up quickly. It can also capture video with audio correctly in sync. The phone has 3 camera sensors and all them are supported and exposed individually. There is no advance mode to manually control WB, ISO, codec, etc but it does have tap to auto adjust the focus/wb/iso and it works really well.
 
-| Library        |  Supported                                     | 
+| Library        |  Supported                                     |
 |----------------|-----------------------------------------------:|
 | Libcamera      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Droidmedia     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
@@ -226,37 +226,37 @@ The phone does not support libcamera and megapixels like mainline linux phones. 
 | Medium | Convoy S21B 3rd click, Emisar DW4 High Ramp |
 | Low    | Convoy S21B 1st click, Emisar DW4 Moonlight |
 
-Flashlights were pointed at the ceiling and everything left on auto, Pixel 6 and Iphone 12 both have a night mode where it took 3s for the low light photos
+Flashlights were pointed at the ceiling and everything left on auto, Pixel 9 and Iphone 12 both have a night mode where it took 3s for the low light photos
 
 ## Normal Temp Medium Light
 
-| FLX1 | Pixel 6| iPhone 12 |
-|------|--------|-----------|
-| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Normal_Temp_Medium_Lux.jpg", width=360, alt="FLX1 B35AM 5000k Medium Light") }} | {{ resize_image(path="/furilabs-flx1/camera/Pixel_6_Normal_Temp_Medium_Lux.jpg", width=360, alt="Pixel 6 B35AM 5000k Medium Light") }} | {{ resize_image(path="/furilabs-flx1/camera/Iphone_12_Normal_Temp_Medium_Lux.jpg", width=360, alt="iPhone 12 B35AM 5000k Medium Light") }} |
+| FLX1 | Pixel 9| iPhone 12 |
+|------|---------|-----------|
+| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Normal_Temp_Medium_Lux.jpg", width=360, alt="FLX1 B35AM 5000k Medium Light") }} | {{ resize_image(path="/camera/Pixel_9_Normal_Temp_Medium_Lux.jpg", width=300, alt="pixel 9 B35AM 5000k Medium Light") }} | {{ resize_image(path="/camera/Iphone_12_Normal_Temp_Medium_Lux.jpg", width=360, alt="iPhone 12 B35AM 5000k Medium Light") }} |
 
 ## Normal Temp Low Light
 
-| FLX1 | Pixel 6| iPhone 12 |
-|------|--------|-----------|
-| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Normal_Temp_Low_Lux.jpg", width=360, alt="FLX1 B35AM 5000k Low Light") }} | {{ resize_image(path="/furilabs-flx1/camera/Pixel_6_Normal_Temp_Low_Lux.jpg", width=360, alt="Pixel 6 B35AM 5000k Low Light") }} | {{ resize_image(path="/furilabs-flx1/camera/Iphone_12_Normal_Temp_Low_Lux.jpg", width=360, alt="iPhone 12 B35AM 5000k Low Light") }} |
+| FLX1 | Pixel 9 | iPhone 12 |
+|------|---------|-----------|
+| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Normal_Temp_Low_Lux.jpg", width=360, alt="FLX1 B35AM 5000k Low Light") }} | {{ resize_image(path="/camera/Pixel_9_Normal_Temp_Low_Lux.jpg", width=300, alt="pixel 9 B35AM 5000k Low Light") }} | {{ resize_image(path="/camera/Iphone_12_Normal_Temp_Low_Lux.jpg", width=360, alt="iPhone 12 B35AM 5000k Low Light") }} |
 
 ## Low Temp Medium Light
 
-| FLX1 | Pixel 6| iPhone 12 |
-|:----:|:------:|:---------:|
-| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Low_Temp_Medium_Lux.jpg", width=360, alt="FLX1 519a 3500K DD Medium Light") }} | {{ resize_image(path="/furilabs-flx1/camera/Pixel_6_Low_Temp_Medium_Lux.jpg", width=360, alt="Pixel 6 519a 3500K DD Medium Light") }} | {{ resize_image(path="/furilabs-flx1/camera/IPhone_12_Low_Temp_Medium_Lux.jpg", width=360, alt="iPhone 12 519a 3500K DD Medium Light") }} |
+| FLX1 | Pixel 9 | iPhone 12 |
+|:----:|:-------:|:---------:|
+| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Low_Temp_Medium_Lux.jpg", width=360, alt="FLX1 519a 3500K DD Medium Light") }} | {{ resize_image(path="/camera/Pixel_9_Low_Temp_Medium_Lux.jpg", width=300, alt="pixel 9 519a 3500K DD Medium Light") }} | {{ resize_image(path="/camera/Iphone_12_Low_Temp_Medium_Lux.jpg", width=360, alt="iPhone 12 519a 3500K DD Medium Light") }} |
 
 ## Low Temp Low Light
 
-| FLX1 | Pixel 6| iPhone 12 |
-|:----:|:------:|:---------:|
-| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Low_Temp_Low_Lux.jpg", width=360, alt="FLX1 519a 3500K DD Low Light") }} | {{ resize_image(path="/furilabs-flx1/camera/Pixel_6_Low_Temp_Low_Lux.jpg", width=360, alt="Pixel 6 519a 3500K DD Low Light") }} | {{ resize_image(path="/furilabs-flx1/camera/IPhone_12_Low_Temp_Low_Lux.jpg", width=360, alt="iPhone 12 519a 3500K DD Low Light") }} |
+| FLX1 | Pixel 9 | iPhone 12 |
+|:----:|:-------:|:---------:|
+| {{ resize_image(path="/furilabs-flx1/camera/FLX1_Low_Temp_Low_Lux.jpg", width=360, alt="FLX1 519a 3500K DD Low Light") }} | {{ resize_image(path="/camera/Pixel_9_Low_Temp_Low_Lux.jpg", width=300, alt="pixel 9 519a 3500K DD Low Light") }} | {{ resize_image(path="/camera/Iphone_12_Low_Temp_Low_Lux.jpg", width=360, alt="iPhone 12 519a 3500K DD Low Light") }} |
 
 
 
 # Battery Life
 
-The phone has amazing battery life with the screen on and on standby. Standby is also different from the mainline devices as it does not use deep sleep. Instead it uses a low power mode, this allows it to continue running applications and keep network alive. This has the major benefit of allowing you to ssh in at anytime and continue to receive notifications from all apps including web based apps. Charging speed is also great supporting Power Delivery at 10v 3a allowing you to get multiple hours of battery life with just a handful of minutes on the charger. 
+The phone has amazing battery life with the screen on and on standby. Standby is also different from the mainline devices as it does not use deep sleep. Instead it uses a low power mode, this allows it to continue running applications and keep network alive. This has the major benefit of allowing you to ssh in at anytime and continue to receive notifications from all apps including web based apps. Charging speed is also great supporting Power Delivery at 10v 3a allowing you to get multiple hours of battery life with just a handful of minutes on the charger.
 
 Testing was done using the following settings:
 
