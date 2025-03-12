@@ -23,7 +23,7 @@ series = "Phones"
     * v4l2: Supported
     * Gstreamer: Supported
     * Qcamera: Supported
-- Battery Life: /5
+- Battery Life: 2/5
 
 # Setup information
 - OS: PostmarketOS Edge
@@ -200,7 +200,7 @@ Testing was done using the following settings:
 
 | Method | Battery Life |
 |--------|--------------|
-| Screen on |  |
+| Screen on | 3.2 hours |
 | Screen on + Android |  |
 | mpv 720p Video Playback |  |
 | Stress cpu |  |
