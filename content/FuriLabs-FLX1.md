@@ -201,15 +201,15 @@ Testing was done using the following settings:
 - Without android unless specified
 - With sim unless specified
 
-| Method | Battery Life |
-|--------|--------------|
-| Screen on | 9.5 hours |
-| Screen on + Android | 9 hours |
-| mpv 720p Video Playback |  |
-| Stress cpu |  |
-| Standby |  |
-| Standby without sim |   |
-| Standby + Android |  |
+| Method                  | Battery Life |
+|-------------------------|--------------|
+| Screen on               | 9.5 hours    |
+| Screen on + Android     | 9 hours      |
+| mpv 720p Video Playback | 6.75 hours   |
+| Stress cpu              |  |
+| Standby                 |  |
+| Standby without sim     |  |
+| Standby + Android       |  |
 
 
 # Support
