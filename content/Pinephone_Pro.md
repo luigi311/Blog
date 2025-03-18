@@ -204,7 +204,7 @@ Testing was done using the following settings:
 | Screen on + Android |  |
 | mpv 720p Video Playback |  |
 | Stress cpu |  |
-| Standby |  |
+| Standby | <12 hours |
 | Standby without sim |   |
 | Standby + Android |  |
 
