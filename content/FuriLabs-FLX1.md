@@ -205,11 +205,12 @@ Testing was done using the following settings:
 |-------------------------|--------------|
 | Screen on               | 9.5 hours    |
 | Screen on + Android     | 9 hours      |
+| Screen on without sim   |       |
 | mpv 720p Video Playback | 6.75 hours   |
 | Stress cpu              |  |
-| Standby                 |  |
+| Standby                 | 3.66 days    |
 | Standby without sim     |  |
-| Standby + Android       |  |
+| Standby + Android       | 2.63 days    |
 
 
 # Support
