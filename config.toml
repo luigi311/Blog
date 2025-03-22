@@ -227,7 +227,7 @@ pwa_BASE_CACHE_FILES = "'/js/theme.min.js','/js/theme_light.min.js','/abridge.cs
 
 favicon_theme_color = "#333333"
 favicon_ms_color = "#333333"
-favicon_mask = "safari-pinned-tab.svg" # safari-pinned-tab.svg
+favicon_mask = "favicon.svg" # safari-pinned-tab.svg
 favicon_mask_color = "#ff9900"
 favicon_svg = "favicon.svg" # favicon.svg
 favicon180 = "apple-touch-icon.png" # apple-touch-icon.png
