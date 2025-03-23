@@ -203,9 +203,9 @@ Testing was done using the following settings:
 
 | Method                  | Battery Life |
 |-------------------------|--------------|
-| Screen on               | 9.5 hours    |
+| Screen on               | 9.50 hours   |
 | Screen on + Android     | 9 hours      |
-| Screen on without sim   |       |
+| Screen on without sim   | 9.70 hours   |
 | mpv 720p Video Playback | 6.75 hours   |
 | Stress cpu              |  |
 | Standby                 | 3.66 days    |
