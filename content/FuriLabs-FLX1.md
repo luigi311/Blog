@@ -13,17 +13,34 @@ series = "Phones"
 +++
 
 - Performance: 4/5
-- GPS and aGPS: GPS works well even without aGPS. aGPS can be enabled in the settings
 - Affordability: Great price for the hardware and support provided
 - Compatibility: 3/5
 - Battery Life: 5/5
+
 
 # Setup information
 - OS: FuriOS 13.0.9
 - Kernel: 4.19.325
 - DE: Phosh
 
-# Service
+
+# Hardware Supported
+
+| Hardware          | Supported                                          |
+|-------------------|----------------------------------------------------|
+| Modem             | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| GPS               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| aGPS¹             | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| Cameras           | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| Fingerprint       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| Wireless Charging | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| Microphone        | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| Bluetooth²        | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
+
+¹ Not hardware but important usability feature  
+² Bluetooth is working but seems to have difficulty connecting to some devices
+
+# Cell Service
 
 | Phone    | Service             | Technology | Speed | VoLTE/VoNR                                     |  
 |----------|---------------------|------------|-------|------------------------------------------------|
@@ -49,7 +66,10 @@ Android support is amazing with lots of sensors passed through to the container,
 
 {{ resize_image(path="/images/misc/furios/android_settings.png", width=480, alt="FuriOS Android Settings") }}
 
+
 ## Sensors passed to Android
+
+Tested using [....](https://localhost) app
 
 | Sensor              | Passed through |
 |---------------------|----------------|
@@ -59,7 +79,7 @@ Android support is amazing with lots of sensors passed through to the container,
 | Bluetooth           | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Modem               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | NFC                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Fingerprint Sensor  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Fingerprint         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Accelerometer       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Geomagnetic         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Orientation         | {{ img(src="/icons/cross.svg" alt="No")}}      |
@@ -71,9 +91,6 @@ Android support is amazing with lots of sensors passed through to the container,
 | Linear Acceleration | {{ img(src="/icons/cross.svg" alt="No")}}      | 
 | Rotation Vector     | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Step Counter        | {{ img(src="/icons/cross.svg" alt="No")}}      |
-
-
-{{ img(src="/icons/exclamation.svg" alt="Maybe")}} Means currently WIP
 
 
 # Docking
