@@ -13,22 +13,24 @@ series = "Phones"
 +++
 
 - Performance: 4/5
-- VoLTE Calls: Supported
 - GPS and aGPS: GPS works well even without aGPS. aGPS can be enabled in the settings
 - Affordability: Great price for the hardware and support provided
 - Compatibility: 3/5
-- Camera Support:
-    * Libcamera: Not supported
-    * Megapixels: Not supported
-    * v4l2: Supported
-    * Gstreamer: Supported
-    * Qcamera: Supported
 - Battery Life: 5/5
 
 # Setup information
-- OS: FuriOS 13.0.8
+- OS: FuriOS 13.0.9
 - Kernel: 4.19.325
 - DE: Phosh
+
+# Service
+
+| Phone    | Service             | Technology | Speed | VoLTE/VoNR                                     |  
+|----------|---------------------|------------|-------|------------------------------------------------|
+| FLX1     | US Mobile (Tmobile) | 4G         |       | 
+| Pixel 6a | US Mobile (Tmobile) | 5G         |       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| FLX1     | US Mobile (Verizon) | 4G         |       |
+| FLX1     | US Mobile (AT&T)    | 4G         |       |
 
 
 # Performance
@@ -54,21 +56,21 @@ Android support is amazing with lots of sensors passed through to the container,
 | GPS                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Cameras             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Microphone          | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Bluetooth           | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Bluetooth           | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Modem               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | NFC                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Fingerprint Sensor  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Accelerometer       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Geomagnetic         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Orientation         | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Orientation         | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Gyroscope           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Light               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Pressure            | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Proximity           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Gravity             | {{ img(src="/icons/cross.svg" alt="No")}} |
-| Linear Acceleration | {{ img(src="/icons/cross.svg" alt="No")}} | 
-| Rotation Vector     | {{ img(src="/icons/cross.svg" alt="No")}} |
-| Step Counter        | {{ img(src="/icons/cross.svg" alt="No")}}  |
+| Gravity             | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Linear Acceleration | {{ img(src="/icons/cross.svg" alt="No")}}      | 
+| Rotation Vector     | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Step Counter        | {{ img(src="/icons/cross.svg" alt="No")}}      |
 
 
 {{ img(src="/icons/exclamation.svg" alt="Maybe")}} Means currently WIP
@@ -83,11 +85,11 @@ The FLX1 docking is in a weird position as the hardware does not support usb dp-
 
 Web browsing works really well. Firefox is a custom build that they maintain internal with improvements to performance and scaling to make it more mobile friendly. Due to it being a custom build it is possible for it to fall behind a few releases due to diffs in new releases but so far they are on top of it and the changes are amazing. Benchmarking results with [speedometer 3.0](https://browserbench.org/Speedometer3.0/) are below but I would recommend sticking with firefox. Angelfish does not launch at all.
 
-| Browser | Score | Version | Toolkit | Install Method |
-|---------|-------|---------|---------|--------|
-| Firefox | 2.77 &plusmn; 0.060 | 135.0.1 | Gecko   | Repo |
-| Angelfish | N/A | 24.12.3 | Chromium | Flatpak |
-| Epiphany | 1.46 &plusmn; 0.030 | 47.3.1 | WebKit | Flatpak |
+| Browser   | Score               | Version | Toolkit  | Install |
+|-----------|---------------------|---------|----------|---------|
+| Firefox   | 2.77 &plusmn; 0.060 | 135.0.1 | Gecko    | Repo    |
+| Angelfish | N/A                 | 24.12.3 | Chromium | Flatpak |
+| Epiphany  | 1.46 &plusmn; 0.030 | 47.3.1  | WebKit   | Flatpak |
 
 
 # Media Playback
@@ -96,55 +98,55 @@ Below is a table of different video codecs and their playback performance. Based
 
 ### Player Information
 
-| Player | Version | Method |
-|--------|---------|--------|
-| MPV    | 0.39.0  | Repo |
-| Clapper | 0.6.1  | Flatpak |
-| Livi | 0.3.1  | Flatpak |
+| Player  | Version | Method  |
+|---------|---------|---------|
+| MPV     | 0.39.0  | Repo    |
+| Clapper | 0.6.1   | Flatpak |
+| Livi    | 0.3.1   | Flatpak |
 
 ### H.264/AVC
 
-| Resolution | FPS | Player | Realtime Playback | Hardware Acceleration |
-|------------|-----|--------|-------------------|-----------------------|
-| 1080p      | 30  | MPV | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Resolution | FPS | Player  | Realtime Playback | Hardware Acceleration |
+|------------|-----|---------|-------------------|-----------------------|
+| 1080p      | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Livi    | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Livi    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 
 ### H.265/HEVC
 
-| Resolution | FPS | Player | Realtime Playback | Hardware Acceleration |
-|------------|-----|--------|-------------------|-----------------------|
-| 1080p      | 30  | MPV    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Resolution | FPS | Player  | Realtime Playback | Hardware Acceleration |
+|------------|-----|---------|-------------------|-----------------------|
+| 1080p      | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Livi    | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Livi    | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
 
 ### AV1
 
-| Resolution | FPS | Player | Realtime Playback | Hardware Acceleration |
-|------------|-----|--------|-------------------|-----------------------|
-| 1080p      | 30  | MPV    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Resolution | FPS | Player  | Realtime Playback | Hardware Acceleration |
+|------------|-----|---------|-------------------|-----------------------|
+| 1080p      | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Livi    | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Livi    | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 
 ### VP9
 
-| Resolution | FPS | Player | Realtime Playback | Hardware Acceleration |
-|------------|-----|--------|-------------------|-----------------------|
-| 1080p      | 30  | MPV    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Resolution | FPS | Player  | Realtime Playback | Hardware Acceleration |
+|------------|-----|---------|-------------------|-----------------------|
+| 1080p      | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 1080p      | 30  | Livi    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | MPV     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Clapper | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| 720p       | 30  | Livi    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 
 
 {{ img(src="/icons/exclamation.svg" alt="Maybe")}} Close to real-time playback, few dropped frames in heavy scenes only
@@ -152,15 +154,26 @@ Below is a table of different video codecs and their playback performance. Based
 
 # Camera
 
-The phone does not support libcamera or megapixels like other linux phones. Instead it has it's own camera stack that exposes the cameras out via v4l, gstreamer and qcamera. This allows it to be used universally by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant. The camera application also opens up almost instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well.
+The phone does not support libcamera and megapixels like mainline linux phones. Instead it has it's own camera stack and exposes the cameras out via v4l, gstreamer, qcamera and pipewire as of April 20, 2025 (update 13.0.9). This allows it to be used universally by other applications for video chatting such as through firefox. The camera quality is really good and the processing is instant as it's using the isp. The camera application also opens up almost instantly allowing you to quickly capture a moment. It is also capable of taking video with audio in sync. The phone has 3 camera sensors and all them are supported and exposed. There is no advance mode to manually control WB, ISO, codec, etc. It does have tap to adjust though and the auto focus/wb/iso works really well.
+
+| Library    |  Supported                                     | 
+|------------|------------------------------------------------|
+| Libcamera  | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Megapixels | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| v4l2       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Gstreamer  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Qcamera    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Pipewire   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
+## Example
 
 | Temp   | Kelvin | Led   |
 |--------|--------|-------|
 | Normal | 5000k  | B35AM |
 | Low    | 2500k  | 519A 3500K dedome  |
 
-| Light | Description |
-|-------|-------------|
+| Light  | Description |
+|--------|-------------|
 | Medium | Convoy S21B 3rd click pointed at ceiling |
 | Low    | Emisar DW4 Minimum brightness. Ceiling for superman. Direct from distance for color checker |
 
@@ -203,14 +216,14 @@ Testing was done using the following settings:
 
 | Method                  | Battery Life |
 |-------------------------|--------------|
-| Screen on               | 9.50 hours   |
-| Screen on + Android     | 9 hours      |
-| Screen on without sim   | 9.70 hours   |
-| mpv 720p Video Playback | 6.75 hours   |
+| Screen on               |    |
+| Screen on + Android     |       |
+| Screen on without sim   |    |
+| mpv 720p Video Playback |    |
 | Stress cpu              |  |
-| Standby                 | 3.66 days    |
+| Standby                 |     |
 | Standby without sim     |  |
-| Standby + Android       | 2.63 days    |
+| Standby + Android       |     |
 
 
 # Support
