@@ -61,10 +61,14 @@ Here are some screenshots to show a before and after widevine L3 has been config
 sudo apt install curl git python3 squashfs-tools
 ```
 
+## Archlinux
+```bash
+sudo pacman -S curl git python3 squashfs-tools
+```
 
 # Install
 
-Tested on a Furilabs FLX1
+Tested on a Furilabs FLX1 and Pinephone Pro
 
 Clone into the git repo by AsahiLinux
 ```bash
