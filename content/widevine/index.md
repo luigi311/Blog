@@ -91,3 +91,10 @@ sudo LIBDIR="/usr/lib" ./widevine-installer
 ```
 
 Once completed, give your system a reboot and you should be good to go! Try opening the bitmovin drm testing site and see if it reports widevine is supported.
+
+
+# Special thanks
+
+- AsahiLinux for developing and maintaining the installer
+- Widevine folks for creating a software L3
+- Google for releasing widevine L3 binaries for both AMD64 and ARM64, hopefully more architectures too at some point
