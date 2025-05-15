@@ -52,26 +52,26 @@ Cell service was tested in the US utilizing US Mobile MVNO, [referral link](http
 
 ## US Mobile Warp (Verizon)
 
-| Phone   | Connection | Speedtest download | Fast download | Fast upload | VoLTE / VoNR                                   |
-| :------ | :--------- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
-| FLX1    | 4G         |                  X |             X |           X | |
-| Pixel 6 | 5G         |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Phone   | Tech | Speedtest down | Fast down | Fast up | VoLTE / VoNR                                   |
+| :------ | :--- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
+| FLX1    | 4G   |                  X |             X |           X | |
+| Pixel 6 | 5G   |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ## US Mobile Dark Star (AT&T)
 
-| Phone   | Connection | Speedtest download | Fast download | Fast upload | VoLTE / VoNR                                   |
-| :------ | :--------- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
-| FLX1    | 4G         |                  X |             X |           X | |
-| Pixel 6 | 5G         |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Phone   | Tech | Speedtest down | Fast down | Fast up | VoLTE / VoNR                                   |
+| :------ | :--- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
+| FLX1    | 4G   |                  X |             X |           X | |
+| Pixel 6 | 5G   |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ## US Mobile Light Speed (Tmobile)
 
-| Phone   | Connection | Speedtest download | Fast download | Fast upload | VoLTE / VoNR                                   |
-| :------ | :--------- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
-| FLX1    | 4G         |          3.21 Mbps |      1.5 Mbps |    3.7 Mbps |  |
-| Pixel 6 | 5G         |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Phone   | Tech | Speedtest down | Fast down | Fast up | VoLTE / VoNR                                   |
+| :------ | :--- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
+| FLX1    | 4G   |          3.21 Mbps |      1.5 Mbps |    3.7 Mbps |  |
+| Pixel 6 | 5G   |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 # Performance
 
