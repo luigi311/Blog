@@ -32,7 +32,7 @@ series = "Phones"
 | aGPS¹               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Cameras             | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Microphone          | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Bluetooth           | {{ img(src="/icons/exclamation.svg" alt="Partial")}} |
+| Bluetooth²          | {{ img(src="/icons/exclamation.svg" alt="Partial")}} |
 | Modem               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | NFC                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Fingerprint         | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
@@ -41,19 +41,35 @@ series = "Phones"
 | Light               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Proximity           | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 
+---
 ¹ Not hardware but important usability feature and is optional  
 ² Bluetooth is working but seems to have difficulty connecting to some devices
 
+
 # Cell Service
 
-| Phone    | Service                         | Tech | Speed   | VoLTE/VoNR                                     |  
-|----------|---------------------------------|------|---------|------------------------------------------------|
-| FLX1     | US Mobile Light Speed (Tmobile) | 4G   | X MB/s  | 
-| Pixel 6a | US Mobile Light Speed (Tmobile) | 5G   | X MB/s  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| FLX1     | US Mobile Warp (Verizon)        | 4G   | X MB/s  |
-| Pixel 6a | US Mobile Warp (Verizon)        | 5G   | X MB/s  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| FLX1     | US Mobile Dark Star (AT&T)      | 4G   | X MB/s  |
-| Pixel 6a | US Mobile Dark Star (AT&T)      | 5G   | X MB/s  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+## US Mobile Light Speed (Tmobile)
+
+| Phone    | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
+| :------- | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
+| FLX1     | 4G         |                                      3.21 |                                 |  |
+| Pixel 6a | 5G         |                                         X |                                 |  |
+
+## US Mobile Warp (Verizon)
+
+| Phone    | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
+| :------- | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
+| FLX1     | 4G         |                                         X |                                 |  |
+| Pixel 6a | 5G         |                                         X |                                 |  |
+
+
+
+## US Mobile Dark Star (AT&T)
+
+| Phone    | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
+| :------- | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
+| FLX1     | 4G         |                                         X |                                 |  |
+| Pixel 6a | 5G         |                                         X |                                 |  |
 
 
 
@@ -116,6 +132,7 @@ Web browsing works really well. Firefox is a custom build that they maintain int
 | Epiphany   | 1.86 &plusmn; 0.065 | 48.3    | WebKit   | Flatpak |
 | Kumo¹      | N/A                 | 1.1.0   | Webkit   | Flatpak |
 
+---
 ¹ Fails to launch
 
 # Media Playback
@@ -144,6 +161,7 @@ Below is a table of different video codecs and their playback performance. The h
 | 720p       | 30  | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
 | 720p       | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
 
+---
 ¹ Stutters on render
 
 ### H.265/HEVC
@@ -159,6 +177,7 @@ Below is a table of different video codecs and their playback performance. The h
 | 720p       | 30  | Livi²     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
 | 720p       | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
 
+---
 ¹ Stutters on render  
 ² No video output at all
 
