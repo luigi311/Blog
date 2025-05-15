@@ -48,30 +48,30 @@ series = "Phones"
 
 # Cell Service
 
-Cell service was tested in the US utilizing US Mobile MVNO, [referral link](https://www.usmobile.com/referrals?referrer=0178DFD2&name=Luis&utm_campaign=monster_referral), as it allows for easy testing of the 3 major US network providers. The only downside is the TMobile service has deprioritized download speeds so your speeds can be on the slower side like mine based on location and network traffic.
+Cell service was tested in the US utilizing US Mobile MVNO, [referral link](https://www.usmobile.com/referrals?referrer=0178DFD2&name=Luis&utm_campaign=monster_referral), as it allows for easy testing of the 3 major US network providers. The only downside is the TMobile service has deprioritized download speeds so your speeds can be on the slower side like mine based on location and network traffic. Download/Upload speed tests were done using ookla [speedtest.net](https://speedtest.net) and netflix [fast.com](https://fast.com)
 
 ## US Mobile Warp (Verizon)
 
-| Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
-| :------ | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
-| FLX1    | 4G         |                                         X |                               X |  |
-| Pixel 6 | 5G         |                                         X |                               X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Phone   | Connection | Speedtest download | Fast download | Fast upload | VoLTE / VoNR                                   |
+| :------ | :--------- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
+| FLX1    | 4G         |                  X |             X |           X | |
+| Pixel 6 | 5G         |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ## US Mobile Dark Star (AT&T)
 
-| Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
-| :------ | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
-| FLX1    | 4G         |                                         X |                               X |  |
-| Pixel 6 | 5G         |                                         X |                               X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Phone   | Connection | Speedtest download | Fast download | Fast upload | VoLTE / VoNR                                   |
+| :------ | :--------- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
+| FLX1    | 4G         |                  X |             X |           X | |
+| Pixel 6 | 5G         |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ## US Mobile Light Speed (Tmobile)
 
-| Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
-| :------ | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
-| FLX1    | 4G         |                                      3.21 |                             1.5 |  |
-| Pixel 6 | 5G         |                                         X |                               X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Phone   | Connection | Speedtest download | Fast download | Fast upload | VoLTE / VoNR                                   |
+| :------ | :--------- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
+| FLX1    | 4G         |          3.21 Mbps |      1.5 Mbps |    3.7 Mbps |  |
+| Pixel 6 | 5G         |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 # Performance
 
