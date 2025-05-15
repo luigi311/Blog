@@ -48,30 +48,30 @@ series = "Phones"
 
 # Cell Service
 
-## US Mobile Light Speed (Tmobile)
-
-| Phone    | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
-| :------- | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
-| FLX1     | 4G         |                                      3.21 |                                 |  |
-| Pixel 6a | 5G         |                                         X |                                 |  |
-
 ## US Mobile Warp (Verizon)
 
-| Phone    | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
-| :------- | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
-| FLX1     | 4G         |                                         X |                                 |  |
-| Pixel 6a | 5G         |                                         X |                                 |  |
-
+| Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
+| :------ | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
+| FLX1    | 4G         |                                         X |                               X |  |
+| Pixel 6 | 5G         |                                         X |                               X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ## US Mobile Dark Star (AT&T)
 
-| Phone    | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
-| :------- | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
-| FLX1     | 4G         |                                         X |                                 |  |
-| Pixel 6a | 5G         |                                         X |                                 |  |
+| Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
+| :------ | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
+| FLX1    | 4G         |                                         X |                               X |  |
+| Pixel 6 | 5G         |                                         X |                               X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
+## US Mobile Light Speed (Tmobile)
+
+US Mobiles Tmobile service is deprioritized so data speeds are limited like mine
+
+| Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
+| :------ | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
+| FLX1    | 4G         |                                      3.21 |                             1.5 |  |
+| Pixel 6 | 5G         |                                         X |                               X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 # Performance
 
