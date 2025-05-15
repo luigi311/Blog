@@ -48,6 +48,8 @@ series = "Phones"
 
 # Cell Service
 
+Cell service was tested in the US utilizing US Mobile MVNO, [referral link](https://www.usmobile.com/referrals?referrer=0178DFD2&name=Luis&utm_campaign=monster_referral), as it allows for easy testing of the 3 major US network providers. The only downside is the TMobile service has deprioritized download speeds.
+
 ## US Mobile Warp (Verizon)
 
 | Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
@@ -65,8 +67,6 @@ series = "Phones"
 
 
 ## US Mobile Light Speed (Tmobile)
-
-US Mobiles Tmobile service is deprioritized so data speeds are limited like mine
 
 | Phone   | Connection | [Speedtest](https://speedtest.net) (Mbps) | [Fast](https://fast.com) (Mbps) | VoLTE / VoNR                                   |
 | :------ | :--------- | ----------------------------------------: | ------------------------------: | :--------------------------------------------: |
