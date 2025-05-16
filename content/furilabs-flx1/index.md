@@ -40,6 +40,8 @@ series = "Phones"
 | Orientation         | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Light               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 | Proximity           | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
+| NPU                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
+| Step Counter        | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
 
 ---
 ¹ Not hardware but important usability feature and is optional  
@@ -53,25 +55,25 @@ Cell service was tested in the US utilizing US Mobile MVNO, [referral link](http
 ## US Mobile Warp (Verizon)
 
 | Phone   | Tech | Speedtest down | Fast down | Fast up | VoLTE / VoNR                                   |
-| :------ | :--- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
-| FLX1    | 4G   |                  X |             X |           X | |
-| Pixel 6 | 5G   |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| :------ | :--- | -------------: | --------: | ------: | :--------------------------------------------: |
+| FLX1    | 4G   |              X |         X |       X | |
+| Pixel 6 | 5G   |              X |         X |       X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ## US Mobile Dark Star (AT&T)
 
 | Phone   | Tech | Speedtest down | Fast down | Fast up | VoLTE / VoNR                                   |
-| :------ | :--- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
-| FLX1    | 4G   |                  X |             X |           X | |
-| Pixel 6 | 5G   |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| :------ | :--- | -------------: | --------: | ------: | :--------------------------------------------: |
+| FLX1    | 4G   |              X |         X |       X | |
+| Pixel 6 | 5G   |              X |         X |       X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ## US Mobile Light Speed (Tmobile)
 
-| Phone   | Tech | Speedtest down | Fast down | Fast up | VoLTE / VoNR                                   |
-| :------ | :--- | -----------------: | ------------: | ----------: | :--------------------------------------------: |
-| FLX1    | 4G   |          3.21 Mbps |      1.5 Mbps |    3.7 Mbps |  |
-| Pixel 6 | 5G   |                  X |             X |           X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Phone   | Tech | Speedtest down | Fast down | Fast up  | VoLTE / VoNR                                   |
+| :------ | :--- | -------------: | --------: | -------: | :--------------------------------------------: |
+| FLX1    | 4G   |      3.21 Mbps |  1.5 Mbps | 3.7 Mbps |  |
+| Pixel 6 | 5G   |              X |         X |        X | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 # Performance
 
@@ -85,9 +87,9 @@ The FLX1 is a halium based device so it is limiting to what OS/DE you can run on
 
 # Android
 
-Android support is amazing with lots of sensors passed through to the container, listed below. The android system is called [Andromeda](https://github.com/FuriLabs/andromeda) which forked off Waydroid and has made tons of improvements and updates to the base android system. You should be able to run most android applications without any issues except the usually culprits that have safteynet like banking apps. Video playback works and I can confirm Grayjay works perfectly except the volume control guesture control. Android also integrated perfectly with the rest of the OS with all your android applications showing up in the app drawer. There is a gnome software plugin so you can search and install android apps from fdroid through the gnome software store as if it was a native application removing the need to manually open fdroid. There's a android section in the phosh settings that exposes a lot of android settings to the user as shown below.
+Android support is amazing with lots of sensors passed through to the container, listed below. The android system is called [Andromeda](https://github.com/FuriLabs/andromeda) which forked off Waydroid and has made tons of improvements and updates to the base android system. You should be able to run most android applications without any issues except the usually culprits that have safteynet like banking apps. Video playback works and I can confirm Grayjay works perfectly except the volume control guesture control. Android also integrated perfectly with the rest of the OS with all your android applications showing up in the app drawer. There is a gnome software plugin so you can search and install android apps from fdroid through the gnome software store as if it was a native application removing the need to manually open fdroid. There's a android section in the gnome settings that exposes a lot of android settings to the user as shown below.
 
-{{ resize_image(path="/furilabs-flx1/FLX1_Phosh_Settings_Android.png", width=480, alt="FuriOS Android Settings") }}
+{{ resize_image(path="/furilabs-flx1/FLX1_Gnome_Settings_Android.png", width=480, alt="FuriOS Android Settings") }}
 
 
 ## Sensors passed to Android
@@ -123,7 +125,7 @@ The FLX1 docking is in a weird position as the hardware does not support usb dp-
 
 # Web Browsing
 
-Web browsing works really well. Firefox is a custom build that they maintain internal with improvements to performance and scaling to make it more mobile friendly. Due to it being a custom build it is possible for it to fall behind a few releases due to diffs in new releases but so far they are on top of it and the changes are amazing. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) with scale set to 100% are below but I would recommend sticking with firefox.
+Web browsing works really well. Firefox runs well and comes with a custom configuration similar to postmarketos  mobile-config-firefox for a better experience on mobile screens. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) with scale set to 100% are below, based on results I would recommend sticking with firefox.
 
 | Browser    | Score               | Version | Toolkit  | Install |
 |------------|---------------------|---------|----------|---------|
@@ -147,79 +149,133 @@ Below is a table of different video codecs and their playback performance. The h
 | Clapper   | 0.8.0   | Flatpak |
 | Livi      | 0.3.1   | Flatpak |
 | Celluloid | 0.28    | Repo    |
+| Firefox   | 135.0.1 | Repo    |
 
 ### H.264/AVC
 
-| Resolution | FPS | Player    | Realtime Playback | Hardware Acceleration |
-|------------|-----|-----------|-------------------|-----------------------|
-| 1080p      | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper¹  | {{ img(src="/icons/exclamation.svg" alt="Partial")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi      | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
+#### 1080p@30fps
 
----
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Clapper¹  | {{ img(src="/icons/exclamation.svg" alt="Partial")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Livi      | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
 ¹ Stutters on render
 
-### H.265/HEVC
 
-| Resolution | FPS | Player    | Realtime Playback | Hardware Acceleration |
-|------------|-----|-----------|-------------------|-----------------------|
-| 1080p      | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper¹  | {{ img(src="/icons/exclamation.svg" alt="Partial")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi²     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi²     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
+#### 720p@30fps
+
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
 
 ---
+### H.265/HEVC
+
+#### 1080p@30fps
+
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Clapper¹  | {{ img(src="/icons/exclamation.svg" alt="Partial")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Livi²     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Firefox²  | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
+
+
 ¹ Stutters on render  
 ² No video output at all
 
+
+#### 720p@30fps
+
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Livi²     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Firefox²  | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
+
+² No video output at all
+
+
+---
 ### AV1
 
-| Resolution | FPS | Player    | Realtime Playback | Hardware Acceleration |
-|------------|-----|-----------|-------------------|-----------------------|
-| 1080p      | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+#### 1080p@30fps
 
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
+
+#### 720p@30fps
+
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
+
+---
 ### VP9
 
-| Resolution | FPS | Player    | Realtime Playback | Hardware Acceleration |
-|------------|-----|-----------|-------------------|-----------------------|
-| 1080p      | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 1080p      | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| 720p       | 30  | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+#### 1080p@30fps
+
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
+
+#### 720p@30fps
+
+| Player    | Realtime Playback | Hardware Acceleration |
+|-----------|-------------------|-----------------------|
+| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 # Camera
 
 The phone does not support libcamera and megapixels like mainline linux phones. Instead it has it's own camera stack and exposes the cameras out via v4l, gstreamer, qcamera and pipewire. This allows it to be used universally by other applications. For example for video chatting through firefox. The camera quality is really good and the processing is instant as it's using the mediatek isp. The camera application also opens up quickly. It can also capture video with audio correctly in sync. The phone has 3 camera sensors and all them are supported and exposed individually. There is no advance mode to manually control WB, ISO, codec, etc but it does have tap to auto adjust the focus/wb/iso and it works really well.
 
-| Library    |  Supported                                     | 
-|------------|------------------------------------------------|
-| Libcamera  | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Megapixels | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| v4l2       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Gstreamer  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Qcamera    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Pipewire   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Library        |  Supported                                     | 
+|----------------|------------------------------------------------|
+| Libcamera      | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Droidmedia     | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| CameraProvider | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
+
+| Abstraction Layer   |  Supported                                     |
+|---------------------|------------------------------------------------|
+| LibMegapixels       | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| v4l2                | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Gstreamer           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Qcamera             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Pipewire            | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ## Example
 
