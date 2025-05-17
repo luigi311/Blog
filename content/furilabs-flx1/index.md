@@ -125,33 +125,33 @@ The FLX1 docking is in a weird position as the hardware does not support usb dp-
 
 # Web Browsing
 
-Web browsing works really well. Firefox runs well and comes with a custom configuration similar to postmarketos  mobile-config-firefox for a better experience on mobile screens. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) with scale set to 100% are below, based on results I would recommend sticking with firefox. If you do have andromedia running in the background then running firefox in it is also an option and has great performance since a lot is accelerated.
+Web browsing works really well. Firefox runs well and comes with a custom configuration similar to postmarketos  mobile-config-firefox for a better experience on mobile screens. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) with scale set to 100% are below, based on results I would recommend sticking with firefox. If you do have andromeda running in the background then running firefox in it is also an option and has great performance since a lot is accelerated.
 
-| Browser            | Score               | Version | Toolkit  | Install    |
-|--------------------|---------------------|---------|----------|------------|
-| Firefox            | 2.54 &plusmn; 0.074 | 135.0.1 | Gecko    | Repo       |
-| Angelfish¹         | N/A                 | 25.04.1 | Chromium | Flatpak    |
-| Epiphany           | 1.86 &plusmn; 0.065 | 48.3    | WebKit   | Flatpak    |
-| Kumo¹              | N/A                 | 1.1.0   | Webkit   | Flatpak    |
-| Andromedia Firefox | 4.43 &plusmn; 0.066 | 138.0.3 | Gecko    | Andromedia |
+| Browser           | Score               | Version | Toolkit  | Install    |
+|-------------------|---------------------|---------|----------|------------|
+| Firefox           | 2.54 &plusmn; 0.074 | 135.0.1 | Gecko    | Repo       |
+| Angelfish¹        | N/A                 | 25.04.1 | Chromium | Flatpak    |
+| Epiphany          | 1.86 &plusmn; 0.065 | 48.3    | WebKit   | Flatpak    |
+| Kumo¹             | N/A                 | 1.1.0   | Webkit   | Flatpak    |
+| Andromeda Firefox | 4.43 &plusmn; 0.066 | 138.0.3 | Gecko    | Andromeda  |
 
 ---
 ¹ Fails to launch
 
 # Media Playback
 
-Below is a table of different video codecs and their playback performance. The hardware has support for decoding h264/h265/vp9 and they are working on adding in the software support necessary. The best results for native seem to come from MPV/Celluloid/firefox so as long as you are using any of those performance should be fine and inline with each other. If you do have andromedia running in the background firefox is hardware accelerated so it runs like a dream with little cpu usage.
+Below is a table of different video codecs and their playback performance. The hardware has support for decoding h264/h265/vp9 and they are working on adding in the software support necessary. The best results for native seem to come from MPV/Celluloid/firefox so as long as you are using any of those performance should be fine and inline with each other. If you do have andromeda running in the background, firefox in andromeda is great for media playback as a lot of codecs are hardware accelerated.
 
 ### Player Information
 
-| Player            | Version  | Method      |
-|-------------------|----------|-------------|
-| MPV               | 0.40.0   | Repo        |
-| Clapper           | 0.8.0    | Flatpak     |
-| Livi              | 0.3.1    | Flatpak     |
-| Celluloid         | 0.28     | Repo        |
-| Firefox           | 135.0.1  | Repo        |
-| Andromeda Firefox | 138.0.3  | Andromedia  |
+| Player            | Version  | Method    |
+|-------------------|----------|-----------|
+| MPV               | 0.40.0   | Repo      |
+| Clapper           | 0.8.0    | Flatpak   |
+| Livi              | 0.3.1    | Flatpak   |
+| Celluloid         | 0.28     | Repo      |
+| Firefox           | 135.0.1  | Repo      |
+| Andromeda Firefox | 138.0.3  | Andromeda |
 
 ### H.264/AVC
 
@@ -335,17 +335,20 @@ Testing was done using the following settings:
 - Measured from 100% battery to device shutdown except for standby
 - Without android unless specified
 - With sim unless specified
+- Video playback is 720p 30 fps
 
-| Method                  | Battery Life |
-|-------------------------|--------------|
-| Screen on               |    |
-| Screen on + Android     |       |
-| Screen on without sim   |    |
-| mpv 720p Video Playback |    |
-| Stress cpu              |  |
-| Standby                 |     |
-| Standby without sim     |  |
-| Standby + Android       |     |
+| Method                           | Battery Life |
+|----------------------------------|-------------:|
+| Screen on                        |    |
+| Screen on + Android              |       |
+| Screen on without sim            |    |
+| MPV Video Playback               |    |
+| Firefox Video Playback           |    |
+| Andromeda Firefox Video Playback |   |
+| Stress cpu                       |  |
+| Standby                          |     |
+| Standby without sim              |  |
+| Standby + Android                |     |
 
 
 # Support
