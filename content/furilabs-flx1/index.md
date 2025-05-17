@@ -87,7 +87,7 @@ The FLX1 is a halium based device so it is limiting to what OS/DE you can run on
 
 # Android
 
-Android support is amazing with lots of sensors passed through to the container, listed below. The android system is called [Andromeda](https://github.com/FuriLabs/andromeda) which forked off Waydroid and has made tons of improvements and updates to the base android system. You should be able to run most android applications without any issues except the usually culprits that have safteynet like banking apps. Video playback works and I can confirm Grayjay works perfectly except the volume control guesture control. Android also integrated perfectly with the rest of the OS with all your android applications showing up in the app drawer. There is a gnome software plugin so you can search and install android apps from fdroid through the gnome software store as if it was a native application removing the need to manually open fdroid. There's a android section in the gnome settings that exposes a lot of android settings to the user as shown below.
+Android support is amazing with lots of sensors passed through to the container, listed below. The android system is called [Andromeda](https://github.com/FuriLabs/andromeda) which forked off Waydroid and has made tons of improvements and updates to the base android system. You should be able to run most android applications without any issues except the usually culprits that have Integrity API (Safetynet replacement) like banking apps. Video playback works and I can confirm Grayjay works perfectly except the volume control guesture control. Android also integrated perfectly with the rest of the OS with all your android applications showing up in the app drawer. There is a gnome software plugin so you can search and install android apps from fdroid through the gnome software store as if it was a native application removing the need to manually open fdroid. There's a android section in the gnome settings that exposes a lot of android settings to the user as shown below.
 
 {{ resize_image(path="/furilabs-flx1/FLX1_Gnome_Settings_Android.png", width=480, alt="FuriOS Android Settings") }}
 
@@ -125,56 +125,60 @@ The FLX1 docking is in a weird position as the hardware does not support usb dp-
 
 # Web Browsing
 
-Web browsing works really well. Firefox runs well and comes with a custom configuration similar to postmarketos  mobile-config-firefox for a better experience on mobile screens. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) with scale set to 100% are below, based on results I would recommend sticking with firefox.
+Web browsing works really well. Firefox runs well and comes with a custom configuration similar to postmarketos  mobile-config-firefox for a better experience on mobile screens. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) with scale set to 100% are below, based on results I would recommend sticking with firefox. If you do have andromedia running in the background then running firefox in it is also an option and has great performance since a lot is accelerated.
 
-| Browser    | Score               | Version | Toolkit  | Install |
-|------------|---------------------|---------|----------|---------|
-| Firefox    | 2.54 &plusmn; 0.074 | 135.0.1 | Gecko    | Repo    |
-| Angelfish¹ | N/A                 | 25.04.1 | Chromium | Flatpak |
-| Epiphany   | 1.86 &plusmn; 0.065 | 48.3    | WebKit   | Flatpak |
-| Kumo¹      | N/A                 | 1.1.0   | Webkit   | Flatpak |
+| Browser            | Score               | Version | Toolkit  | Install    |
+|--------------------|---------------------|---------|----------|------------|
+| Firefox            | 2.54 &plusmn; 0.074 | 135.0.1 | Gecko    | Repo       |
+| Angelfish¹         | N/A                 | 25.04.1 | Chromium | Flatpak    |
+| Epiphany           | 1.86 &plusmn; 0.065 | 48.3    | WebKit   | Flatpak    |
+| Kumo¹              | N/A                 | 1.1.0   | Webkit   | Flatpak    |
+| Andromedia Firefox | 4.43 &plusmn; 0.066 | 138.0.3 | Gecko    | Andromedia |
 
 ---
 ¹ Fails to launch
 
 # Media Playback
 
-Below is a table of different video codecs and their playback performance. The hardware has support for decoding h264/h265/vp9 and they are working on adding in the software support necessary. The best results seem to come from MPV and Celluloid so if possible you should use those two for all your video playback.
+Below is a table of different video codecs and their playback performance. The hardware has support for decoding h264/h265/vp9 and they are working on adding in the software support necessary. The best results for native seem to come from MPV/Celluloid/firefox so as long as you are using any of those performance should be fine and inline with each other. If you do have andromedia running in the background firefox is hardware accelerated so it runs like a dream with little cpu usage.
 
 ### Player Information
 
-| Player    | Version | Method  |
-|-----------|---------|---------|
-| MPV       | 0.40.0  | Repo    |
-| Clapper   | 0.8.0   | Flatpak |
-| Livi      | 0.3.1   | Flatpak |
-| Celluloid | 0.28    | Repo    |
-| Firefox   | 135.0.1 | Repo    |
+| Player            | Version  | Method      |
+|-------------------|----------|-------------|
+| MPV               | 0.40.0   | Repo        |
+| Clapper           | 0.8.0    | Flatpak     |
+| Livi              | 0.3.1    | Flatpak     |
+| Celluloid         | 0.28     | Repo        |
+| Firefox           | 135.0.1  | Repo        |
+| Andromeda Firefox | 138.0.3  | Andromedia  |
 
 ### H.264/AVC
 
 #### 1080p@30fps
 
-| Player    | Realtime Playback | Hardware Acceleration |
-|-----------|-------------------|-----------------------|
-| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Clapper¹  | {{ img(src="/icons/exclamation.svg" alt="Partial")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Livi      | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Player            | Realtime Playback | Hardware Acceleration |
+|-------------------|-------------------|-----------------------|
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Clapper¹          | {{ img(src="/icons/exclamation.svg" alt="Partial")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Livi              | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ¹ Stutters on render
 
 
 #### 720p@30fps
 
-| Player    | Realtime Playback | Hardware Acceleration |
-|-----------|-------------------|-----------------------|
-| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Player            | Realtime Playback | Hardware Acceleration |
+|-------------------|-------------------|-----------------------|
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Livi              | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 ---
@@ -189,7 +193,7 @@ Below is a table of different video codecs and their playback performance. The h
 | Livi²     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Firefox²  | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
-
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ¹ Stutters on render  
 ² No video output at all
@@ -204,6 +208,7 @@ Below is a table of different video codecs and their playback performance. The h
 | Livi²     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Firefox²  | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ² No video output at all
 
@@ -219,7 +224,9 @@ Below is a table of different video codecs and their playback performance. The h
 | Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+
 
 
 #### 720p@30fps
@@ -230,7 +237,8 @@ Below is a table of different video codecs and their playback performance. The h
 | Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 
 
 ---
@@ -244,7 +252,8 @@ Below is a table of different video codecs and their playback performance. The h
 | Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 #### 720p@30fps
@@ -255,7 +264,8 @@ Below is a table of different video codecs and their playback performance. The h
 | Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
 | Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/cross.svg" alt="No")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 # Camera
