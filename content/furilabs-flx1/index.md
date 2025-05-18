@@ -343,8 +343,8 @@ Testing was done using the following settings:
 | Screen on + Android              |       |
 | Screen on without sim            |    |
 | MPV Video Playback               |    |
-| Firefox Video Playback           |    |
-| Andromeda Firefox Video Playback |   |
+| Firefox Video Playback           | 7.00 hours |
+| Andromeda Firefox Video Playback | 6.67 hours |
 | Stress cpu                       |  |
 | Standby                          |     |
 | Standby without sim              |  |
