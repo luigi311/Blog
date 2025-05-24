@@ -26,26 +26,26 @@ series = "Phones"
 
 # Hardware Supported
 
-| Hardware            | Supported                                            |
-|---------------------|------------------------------------------------------|
-| GPS                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| aGPS¹               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Cameras             | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Microphone          | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Bluetooth²          | {{ img(src="/icons/exclamation.svg" alt="Partial")}} |
-| Modem               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| NFC                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Fingerprint         | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Accelerometer       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Orientation         | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Light               | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Proximity           | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| NPU                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Step Counter        | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
+| Hardware            | Supported                                      |
+|---------------------|------------------------------------------------|
+| GPS                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| aGPS¹               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Cameras             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Microphone          | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Bluetooth²          | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Modem               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| NFC                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Fingerprint         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Accelerometer       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Orientation         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Light               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Proximity           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| NPU                 | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Step Counter        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ---
 ¹ Not hardware but important usability feature and is optional  
-² Bluetooth is working but seems to have difficulty connecting to some devices
+² Bluetooth is working but uses bluez and that seems to have difficulty connecting to some devices
 
 
 # Cell Service
@@ -326,7 +326,7 @@ The phone does not support libcamera and megapixels like mainline linux phones. 
 
 # Battery Life
 
-The phone has amazing battery life with the screen on and on standby. Standby is also different from the mainline devices as it does not use deep sleep. Instead it uses a low power mode, this allows it to continue running applications and keep network alive. This has the major benefit of allowing you to ssh in at anytime and continue to receive notifications from all apps including web based apps.
+The phone has amazing battery life with the screen on and on standby. Standby is also different from the mainline devices as it does not use deep sleep. Instead it uses a low power mode, this allows it to continue running applications and keep network alive. This has the major benefit of allowing you to ssh in at anytime and continue to receive notifications from all apps including web based apps. Charging speed is also great supporting Power Delivery at 10v 3a allowing you to get multiple hours of battery life with just a handful of minutes on the charger. 
 
 Testing was done using the following settings:
 
@@ -336,19 +336,21 @@ Testing was done using the following settings:
 - Without android unless specified
 - With sim unless specified
 - Video playback is 720p 30 fps
+- Charge time tested on pinepower v1 desktop
 
 | Method                           | Battery Life |
 |----------------------------------|-------------:|
-| Screen on                        |    |
-| Screen on + Android              |       |
+| Screen on                        | 9.82 hours   |
+| Screen on + Android              | 8.83 hours   |
 | Screen on without sim            |    |
+| Screen on + Stress CPU           | 4.86 hours   | 
 | MPV Video Playback               | 6.43 hours   |
-| Firefox Video Playback           | 6.90 hours |
-| Andromeda Firefox Video Playback | 6.67 hours |
-| Stress cpu                       |  |
-| Standby                          |     |
+| Firefox Video Playback           | 6.90 hours   |
+| Andromeda Firefox Video Playback | 6.67 hours   |
+| Standby                          | 4.47 days    |
 | Standby without sim              |  |
 | Standby + Android                |     |
+| Charge 0-80%                     | 55 mins      |
 
 
 # Support
