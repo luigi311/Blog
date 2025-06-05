@@ -57,11 +57,12 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
-      - name: Replace BASE_URL
+      - name: Replace Dev URL
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: |
-          # Replace BASE_URL in config.toml
+          # Replace BASE_URL and ONLINE_URL in config.toml
           sed -i 's|base_url = "https://blog.luigi311.com"|base_url = "https://blog-d.luigi311.com"|' config.toml
+          sed -i 's|online_url = "https://blog.luigi311.com"|online_url = "https://blog-d.luigi311.com"|' config.toml
 
       - name: Install zola
         uses: taiki-e/install-action@v2
