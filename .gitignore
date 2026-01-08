@@ -1,3 +1,10 @@
+# Ignore the static files that zola keeps regenerating
+static/apple-touch-icon.png
+static/favicon-16x16.png
+static/favicon-32x32.png
+static/favicon.svg
+static/banner.png
+
 .env
 public
 build
