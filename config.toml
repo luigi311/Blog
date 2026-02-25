@@ -336,3 +336,14 @@ favicon16 = "favicon-16x16.png" # favicon-16x16.png
 
 #math = false # Recommended setting false, and enable on per page bases instead.
 #math_auto_render = false # Recommended setting false, and enable on per page bases instead.
+
+# Enable rybbit anayltics tracking
+head_extra = '''
+<script
+  defer
+  src="https://analytics.luigi311.com/api/script.js"
+  data-site-id="2"
+  data-track-errors="true"
+  data-session-replay="true"
+></script>
+'''
