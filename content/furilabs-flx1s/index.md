@@ -184,61 +184,61 @@ Below is a table of different video codecs and their playback performance. The h
 
 | Player            | Version  | Method    |
 |-------------------|----------|-----------|
-| MPV               | 0.40.0   | Repo      |
-| Clapper           | 0.8.0    | Flatpak   |
-| Livi              | 0.3.1    | Flatpak   |
-| Celluloid         | 0.28     | Repo      |
-| Firefox           | 135.0.1  | Repo      |
-| Andromeda Firefox | 138.0.3  | Andromeda |
+| MPV               |   | Repo      |
+| Clapper           |   | Flatpak   |
+| Livi              |   | Flatpak   |
+| Celluloid         |   | Repo      |
+| Firefox           |   | Repo      |
+| Andromeda Firefox |   | Andromeda |
 
 ### H.264/AVC
 
-| Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------|
-| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Livi      | {{ img(src="/icons/cross.svg" alt="No")}}             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}}        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}}        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Player            | 1080p@30    | 720p@30    |
+|-------------------|-------------|------------|
+| MPV               |         |  |
+| Clapper           |         |  |
+| Livi              |         |  |
+| Celluloid         |         |  |
+| Firefox           |         |  |
+| Andromeda Firefox |         |  |
 
 ---
 ### H.265/HEVC
 
-| Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------|
-| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Livi ¹     | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}}            |
-| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       | {{ img(src="/icons/checkmark.svg" alt="Yes")}}       |
-| Firefox ¹  | {{ img(src="/icons/cross.svg" alt="No")}}            | {{ img(src="/icons/cross.svg" alt="No")}}            |
-| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Player            | 1080p@30    | 720p@30    |
+|-------------------|-------------|------------|
+| MPV               |         |  |
+| Clapper           |         |  |
+| Livi              |         |  |
+| Celluloid         |         |  |
+| Firefox           |         |  |
+| Andromeda Firefox |         |  |
 
 ¹ No video output at all
 
 ---
 ### AV1
 
-| Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------|
-| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Clapper   | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Player            | 1080p@30    | 720p@30    |
+|-------------------|-------------|------------|
+| MPV               |         |  |
+| Clapper           |         |  |
+| Livi              |         |  |
+| Celluloid         |         |  |
+| Firefox           |         |  |
+| Andromeda Firefox |         |  |
 
 ---
 ### VP9
 
-| Player    | 1080p@30    | 720p@30    |
-|-----------|-------------|------------|
-| MPV       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Clapper   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Livi      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Celluloid | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Firefox   | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Player            | 1080p@30    | 720p@30    |
+|-------------------|-------------|------------|
+| MPV               |         |  |
+| Clapper           |         |  |
+| Livi              |         |  |
+| Celluloid         |         |  |
+| Firefox           |         |  |
+| Andromeda Firefox |         |  |
 
 
 # Camera
