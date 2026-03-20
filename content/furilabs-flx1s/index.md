@@ -323,7 +323,7 @@ Testing was done using the following settings:
 | Screen on                        |     |           |
 | Screen on + Android              |     |           |
 | Screen on + Stress CPU           |     |           |
-| Screen on without sim            |     |           |
+| Screen on without sim            | 11.63 hrs    | 8.60%          |
 
 ---
 
