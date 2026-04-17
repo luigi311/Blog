@@ -344,6 +344,5 @@ head_extra = '''
   src="https://analytics.luigi311.com/api/script.js"
   data-site-id="2"
   data-track-errors="true"
-  data-session-replay="true"
 ></script>
 '''
