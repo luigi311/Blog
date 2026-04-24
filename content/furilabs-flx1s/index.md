@@ -322,7 +322,10 @@ Testing was done using the following settings:
 - With Wifi enabled
 - Video playback is 720p 30 fps
 - Charge time tested on pinepower v1 desktop
-- Prometheus polling every 15 seconds
+- Prometheus polling
+  - Standard: every 15 seconds
+  - Standby: every 30 minutes
+  - Charging: every 5 seconds
 
 ## Screen Time
 
@@ -347,8 +350,6 @@ Testing was done using the following settings:
 
 ## Standby
 
-- prometheus polling every 30 mins
-
 | Method                           | Battery Life | Drain Per Hour |
 |----------------------------------|-------------:|---------------:|
 | Standby                          |     |           |
@@ -365,7 +366,6 @@ Testing was done using the following settings:
 
 ### Charging Curve
 
-- Prometheus polling every 5 seconds
 - Measured from Sonoff S31 running esphome
 
 {{ resize_image(path="/furilabs-flx1/Charge_Curve.png", width=1080, alt="FX1s Battery charging curve") }}
