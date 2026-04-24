@@ -1,7 +1,7 @@
 +++
 title = "Furilabs FLX1s"
 description = "Information about the Furilabs FLX1s, its features and limitations."
-date = 2026-02-25
+date = 2026-04-25
 draft = false
 
 [taxonomies]
@@ -19,8 +19,8 @@ series = "Phones"
 
 
 # Setup information
-- OS: FuriOS 
-- Kernel: 
+- OS: FuriOS 14.0.2
+- Kernel: 4.19.325
 - DE: Phosh
 
 
@@ -30,7 +30,7 @@ The furilabs FLX1s is the sibling device of the FLX1. After the launch of the FL
 
 The FLX1s dubbed the slim, is a more compact and easy to carry phone. The furilabs team were more involved with the design of this phone compared to the FLX1 so they targeted features that would have the most impact on the user experience and left out some feature that were less critical especially in the linux environment. Some of the differences are great for some users but could also be a potential deal breaker for others as such the differences are listed below as a table, if you want the full specs you can check out the [official website](https://furilabs.com/shop/flx1s/). 
 
-The hardware switches are a nice addition to the phone and use a similar design to the librem 5 where they are positioned on the side and easy to use unlike the dip switches on the back of the pinephone that requires removal of the back panel. The lack of the removable battery and waterproofing is a bummer but I know the waterproofing itself causes issues due to the testing and certification process whenever changes need to be made. The reduction in screen resolution isn't to big of a deal to me and can actually bring with it better gpu performance in some cases like games and 90hz is still a big improvement over the 60hz that other linux phones have. The modems themselves also seem to support different bands due to firmware differences between the two ODMs with the FLX1s having more bands supported, hopefully this will make its way back to the FLX1 in the future.
+The hardware switches are a nice addition to the phone and use a similar design to the librem 5 where they are positioned on the side and easy to use unlike the dip switches on the back of the pinephone that requires removal of the back panel. The lack of the removable battery and waterproofing is a bummer but I know the waterproofing itself causes issues due to the testing and certification process whenever changes need to be made. The reduction in screen resolution isn't to big of a deal to me and can actually bring with it better gpu performance in some cases like games and 90hz is still a big improvement over the 60hz that other linux phones have. The modems themselves also seem to support different bands due to firmware differences between the two ODMs with the FLX1s having more bands supported, hopefully this will make its way back to the FLX1 in the future. The shell quality is also a downgrade over the original FLX1 with it being a more brittle and plasticy feeling material though this can be remedied by utilizing a phone case.
 
 | Feature                | FLX1                 | FLX1s (Slim)                  |
 |------------------------|----------------------|-------------------------------|
@@ -76,7 +76,7 @@ Cell service was tested in the US utilizing US Mobile MVNO, [referral link](http
 
 Light Speed (Tmobile) seems to work great without any issues. While the FLX1s does support the bands for 5g, the 5g connection in the US seems to be unstable and causes issues as a result I have disabled the 5g bands. I have seen reports that lots of people outside the US use 5g without any issues. Dark Star (AT&T) along with Warp (Verizon) do not work as the upstream carrier have blocks in place for phones that have not gone through their certification process, which furilabs as a small company has not had the resources to go through.
 
-I use my JMP.Chat eSIM adapter and it works perfectly and even has a built in way to change profiles and add new profiles, it is clunky but it is enough to get the job done. It does not work with [eSIM Manager](https://codeberg.org/lucaweiss/lpa-gtk), hopefully it will in the future or the build in app is improved as adding new profiles is a bit of a hassle.
+I use my JMP.Chat eSIM adapter and it works perfectly and even has a built in way to change profiles and add new profiles, it is clunky but it is enough to get the job done. It does not work with [eSIM Manager](https://codeberg.org/lucaweiss/lpa-gtk), hopefully it will in the future or the built in app is improved as adding new profiles is a bit of a hassle.
 
 ## US Mobile Light Speed (Tmobile)
 
@@ -94,12 +94,14 @@ The FLX1s is a fast phone in general. The Mediatek Dimensity 900 is fast especia
 
 # Compatibility
 
-The FLX1s is a halium based device so it is limiting to what OS/DE you can run on it. Currently you can run both FuriOS and Ubuntu Touch, though FuriOS is the only one officially supported by the FuriLabs team. You wont be able to run any of the other mainline OS though like arch and postmarketos. For desktop environments (DE) you are also limited to Phosh in FuriOS and Lomiri in the Ubuntu Touch port. GTK based applications seem to function the best while some QT based applications have issues such as acceleration and/or failing to launch like angelfish due to upstream issues around GLES support and inclusion in the flatpak builds. The FLX1s also supports multiboot allowing you to install multiple OS side by side. This makes it simple to test new changes without breaking your main image or even testing out separate different OS as they are released. The app they created to manage this is bootman and once an OS is integrated with it then its as simple as telling it to create a new partition of X size and telling it what OS to flash onto the partition. It will then show up as a touch interface when turning the phone on to select what OS/Partition you want to boot into.
+The FLX1s is a halium based device so it is limiting to what OS/DE you can run on it. Currently you can run both FuriOS and Ubuntu Touch, though FuriOS is the only one officially supported by the FuriLabs team. You wont be able to run any of the other mainline OS though like arch and postmarketos. For desktop environments (DE) you are also limited to Phosh in FuriOS and Lomiri in the Ubuntu Touch port. GTK based applications seem to function the best while some QT based applications have issues such as acceleration and/or failing to launch. The FLX1s also supports multiboot allowing you to install multiple OS side by side. This makes it simple to test new changes without breaking your main image or even testing out separate different OS as they are released. The app they created to manage this is bootman and once an OS is integrated with it then its as simple as telling it to create a new partition of X size and telling it what OS to flash onto the partition. It will then show up as a touch interface when turning the phone on to select what OS/Partition you want to boot into.
 
 
 # Android
 
-Android support is amazing with lots of sensors passed through to the container, listed below. The android system is called [Andromeda](https://github.com/FuriLabs/andromeda) which forked off Waydroid and has made tons of improvements and updates to the base android system. You should be able to run most android applications without any issues except the usually culprits that have Integrity API (Safetynet replacement) like banking apps. Video playback works and I can confirm Grayjay works perfectly except the volume control guesture control. Android also integrated perfectly with the rest of the host OS with all your android applications showing up in the app drawer. There is a gnome software plugin so you can search and install android apps from fdroid through the gnome software store as if it was a native application removing the need to manually open fdroid. There's a android section in the gnome settings that exposes a lot of android settings to the user as shown below.
+Android support is amazing with lots of sensors passed through to the container, listed below. The android system is called [Andromeda](https://github.com/FuriLabs/andromeda) which forked off Waydroid and has made tons of improvements and updates to the base android system. You should be able to run most android applications without any issues except the usually culprits that have Integrity API (Safetynet replacement) like banking apps. Video playback works and I can confirm Grayjay works perfectly except the volume control guesture control. Android also integrated perfectly with the rest of the host OS with all your android applications showing up in the app drawer. 
+
+There is a gnome software plugin so you can search and install android apps from fdroid through the gnome software store as if it was a native application removing the need to manually open fdroid. There's a android section in the gnome settings that exposes a lot of android settings to the user as shown below. Enabling the Shared Folder setting allows you to have full access to files in both directions so you can take pictures within the linux environment and share them within android apps and vice versa, download files from android apps and access them within the host linux environment. On the host the android files are located under ~/Android and within android the host files are located under ~/Linux.
 
 {{ resize_image(path="/furilabs-flx1/FLX1_Gnome_Settings_Android.png", width=480, alt="FuriOS Android Settings") }}
 
@@ -116,7 +118,7 @@ Tested using [Sensors Toolbox](https://play.google.com/store/apps/details?id=com
 | Bluetooth           | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Modem               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Accelerometer       | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Geomagnetic         | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Geomagnetic         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Orientation         | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Gyroscope           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Light               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
@@ -125,38 +127,38 @@ Tested using [Sensors Toolbox](https://play.google.com/store/apps/details?id=com
 | Gravity             | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Linear Acceleration | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Rotation Vector     | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Step Counter        | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Step Counter        | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 # Docking
 
-The FLX1s like the FLX1 does not support usb dp-alt mode but they are still able to utilize evdi to get output externally. They have also developed an app that allows for wireless casting of media content directly to an external display via miracast though it seems to not work on every wireless display. The evdi solution is in the works current and they are working on getting their own custom dock released that will be utilizing DisplayLink. The dock will be a separate purchase but will allow users to connect to an external display, keyboard and mouse through a single cable and run a full wayland gnome desktop instance that is hardware accelerated while also using up minimal resources. The dock as yet to ship though so I have not had the chance to test it but based on what has been shown and demoed at FOSDEM 2026, it seems to be a promising solution for users that want to use their phone as a desktop replacement when at home or at the office. Will test once the dock has shipped and update this section with the results.
+The FLX1s like the FLX1 does not support usb dp-alt mode but they are still able to utilize evdi to get output externally. They have also developed an app that allows for wireless casting of media content directly to an external display via miracast though it seems to not work on every wireless display. 
 
 
 # Web Browsing
 
 Web browsing works really well. Firefox runs well and comes with a custom configuration similar to postmarketos mobile-config-firefox for a better experience on mobile screens. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) and [webgl aquarium test](https://webglsamples.org/aquarium/aquarium.html) with scale set to 100% are below. The aquarium test shows every fish count preset to show how the fps scales with the number of fishes.
 
-Based on results I would recommend sticking with firefox, if you do have andromeda running in the background then running firefox in it is also an option. Epiphany while having a nice mobile design, seems to suffer from some performance issues due to some webkit bugs that the flx1s runs into.
+Based on results I would recommend sticking with firefox, if you do have andromeda running in the background then running firefox in it is also an option. Epiphany while having a nice mobile design, seems to suffer from some performance issues due to some webkit bugs that the flx1s runs into. Angelfish runs but since it is qt6 it is missing hardware acceleration and also requires disabling the qt webengine sandbox due to chromium complaining about suid on bwrap.
 
 | Browsers          | Version | Toolkit  | Install    |
 |-------------------|---------|----------|------------|
-| Firefox           | 139.0   | Gecko    | Repo       |
-| Angelfish         | 25.04.1 | Chromium | Flatpak    |
-| Epiphany          | 49.2    | WebKit   | Flatpak    |
-| Kumo              | 1.1.0   | Webkit   | Flatpak    |
-| Andromeda Firefox | 148.0   | Gecko    | Andromeda  |
+| Firefox           |    | Gecko    | Repo       |
+| Angelfish         |  | Chromium | Flatpak    |
+| Epiphany          |     | WebKit   | Flatpak    |
+| Kumo              |    | Webkit   | Flatpak    |
+| Andromeda Firefox |    | Gecko    | Andromeda  |
 
 
 ## Speedometer 3.1
 
 | Browser           | Score               |
 |-------------------|---------------------|
-| Firefox           | 2.72 &plusmn; 0.10  |
+| Firefox           |  &plusmn;   |
 | Angelfish ¹       | N/A                 |
-| Epiphany          | 1.87 &plusmn; 0.06  |
+| Epiphany          |  &plusmn;  |
 | Kumo ¹            | N/A                 |
-| Andromeda Firefox | 5.10 &plusmn; 0.15  |
+| Andromeda Firefox |  &plusmn;   |
 
 ¹ Fails to launch
 
@@ -164,15 +166,15 @@ Based on results I would recommend sticking with firefox, if you do have androme
 
 | Fish amount    | Firefox  | Epiphany | Andromeda Firefox |
 |----------------|----------|----------|-------------------|
-| 100            | 55-63 ¹  | 28       | 90                |
-| 500            | 50-55 ¹  | 25       | 90                |
-| 1,000          | 45-50 ¹  | 20       | 90                |
-| 5,000          | 26       | 9        | 41                |
-| 10,000         | 16       | 6        | 25                |
-| 15,000         | 12       | 4        | 17                |
-| 20,000         | 10       | 3        | 13                |
-| 25,000         | 8        | 3        | 11                |
-| 30,000         | 7        | 2        | 9                 |
+| 100            |  ¹  |       |                |
+| 500            |  ¹  |       |                |
+| 1,000          |  ¹  |       |                |
+| 5,000          |     |       |                |
+| 10,000         |     |       |                |
+| 15,000         |     |       |                |
+| 20,000         |     |       |                |
+| 25,000         |     |       |                |
+| 30,000         |     |       |                |
 
 ¹ Estimated range as the fps seemed to fluctuate a lot while running making it hard to see actual numbers
 
@@ -323,7 +325,7 @@ Testing was done using the following settings:
 | Screen on                        |     |           |
 | Screen on + Android              |     |           |
 | Screen on + Stress CPU           |     |           |
-| Screen on without sim            | 11.63 hrs    | 8.60%          |
+| Screen on without sim            |     |            |
 
 ---
 
