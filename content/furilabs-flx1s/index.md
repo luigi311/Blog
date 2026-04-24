@@ -206,7 +206,6 @@ Below is a table of different video codecs and their playback performance. The h
 | Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
-¹ While plays smoothly it seems to have a stutter like if frames are sometimes played out of order
 
 ---
 ### H.265/HEVC
@@ -215,12 +214,11 @@ Below is a table of different video codecs and their playback performance. The h
 |-------------------|-------------|------------|
 | MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Livi ¹            | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Livi              | {{ img(src="/icons/cross.svg" alt="No")}} ²    | {{ img(src="/icons/cross.svg" alt="No")}} ²    |
 | Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
-¹ No video output at all
 
 ---
 ### AV1
@@ -234,8 +232,6 @@ Below is a table of different video codecs and their playback performance. The h
 | Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
-¹ While plays smoothly it seems to have a stutter like if frames are sometimes played out of order
-
 
 ---
 ### VP9
@@ -244,12 +240,14 @@ Below is a table of different video codecs and their playback performance. The h
 |-------------------|-------------|------------|
 | MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Livi ¹            | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Livi              | {{ img(src="/icons/cross.svg" alt="No")}} ²    | {{ img(src="/icons/cross.svg" alt="No")}} ²    |
 | Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
-¹ No video output at all
+¹ While plays smoothly it seems to have a stutter like if frames are sometimes played out of order
+
+² No video output at all
 
 # Camera
 
