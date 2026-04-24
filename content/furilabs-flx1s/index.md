@@ -139,42 +139,44 @@ The FLX1s like the FLX1 does not support usb dp-alt mode but they are still able
 
 Web browsing works really well. Firefox runs well and comes with a custom configuration similar to postmarketos mobile-config-firefox for a better experience on mobile screens. Benchmarking results with [speedometer 3.1](https://browserbench.org/Speedometer3.1/) and [webgl aquarium test](https://webglsamples.org/aquarium/aquarium.html) with scale set to 100% are below. The aquarium test shows every fish count preset to show how the fps scales with the number of fishes.
 
-Based on results I would recommend sticking with firefox, if you do have andromeda running in the background then running firefox in it is also an option. Epiphany while having a nice mobile design, seems to suffer from some performance issues due to some webkit bugs that the flx1s runs into. Angelfish runs but since it is qt6 it is missing hardware acceleration and also requires disabling the qt webengine sandbox due to chromium complaining about suid on bwrap.
+Based on results I would recommend sticking with firefox. If you do have andromeda running in the background then running firefox in it is also a great option as performance is amazing and it scales perfectly. Epiphany while having a nice mobile design, seems to suffer from some performance issues due to some webkit bugs that the flx1s runs into. Angelfish runs but since it is qt6 it is missing hardware acceleration and also requires disabling the qt webengine sandbox due to chromium complaining about suid on bwrap.
 
-| Browsers          | Version | Toolkit  | Install    |
-|-------------------|---------|----------|------------|
-| Firefox           |    | Gecko    | Repo       |
-| Angelfish         |  | Chromium | Flatpak    |
-| Epiphany          |     | WebKit   | Flatpak    |
-| Kumo              |    | Webkit   | Flatpak    |
-| Andromeda Firefox |    | Gecko    | Andromeda  |
+| Browsers          | Version | Toolkit      | Install    |
+|-------------------|---------|--------------|------------|
+| Firefox           | 1.149.0 | Gecko        | Repo       |
+| Angelfish         | 25.12.3 | Chromium     | Flatpak    |
+| Epiphany          | 50.4    | WebKit       | Flatpak    |
+| Kumo              | 1.7.2   | Webkit/servo | Flatpak    |
+| Andromeda Firefox | 150     | Gecko        | Andromeda  |
 
 
 ## Speedometer 3.1
 
 | Browser           | Score               |
 |-------------------|---------------------|
-| Firefox           |  &plusmn;   |
-| Angelfish ¹       | N/A                 |
-| Epiphany          |  &plusmn;  |
+| Firefox           | 3.03 &plusmn; 0.089 |
+| Angelfish         | 2.59 &plusmn; 0.080 |
+| Epiphany          | 2.06 &plusmn; 0.088 |
 | Kumo ¹            | N/A                 |
-| Andromeda Firefox |  &plusmn;   |
+| Andromeda Firefox | 5.09 &plusmn; 0.16  |
 
 ¹ Fails to launch
 
 ## WebGL Aquarium
 
+Angel**fish** isn't hardware accelerated so no fishes for angel**fish** :'(
+
 | Fish amount    | Firefox  | Epiphany | Andromeda Firefox |
 |----------------|----------|----------|-------------------|
-| 100            |  ¹  |       |                |
-| 500            |  ¹  |       |                |
-| 1,000          |  ¹  |       |                |
-| 5,000          |     |       |                |
-| 10,000         |     |       |                |
-| 15,000         |     |       |                |
-| 20,000         |     |       |                |
-| 25,000         |     |       |                |
-| 30,000         |     |       |                |
+| 100            | 59-66 ¹  | 27       | 90                |
+| 500            | 51-59 ¹  | 24       | 90                |
+| 1,000          | 45-50 ¹  | 21       | 85-90 ¹           |
+| 5,000          | 25-28    | 10       | 40-44             |
+| 10,000         | 17       | 6        | 25                |
+| 15,000         | 12       | 4        | 18                |
+| 20,000         | 10       | 3        | 14                |
+| 25,000         | 8        | 3        | 11                |
+| 30,000         | 7        | 2        | 9                 |
 
 ¹ Estimated range as the fps seemed to fluctuate a lot while running making it hard to see actual numbers
 
@@ -184,37 +186,39 @@ Below is a table of different video codecs and their playback performance. The h
 
 ### Player Information
 
-| Player            | Version  | Method    |
-|-------------------|----------|-----------|
-| MPV               |   | Repo      |
-| Clapper           |   | Flatpak   |
-| Livi              |   | Flatpak   |
-| Celluloid         |   | Repo      |
-| Firefox           |   | Repo      |
-| Andromeda Firefox |   | Andromeda |
+| Player            | Version | Method    |
+|-------------------|---------|-----------|
+| MPV               | 0.41.0  | Repo      |
+| Clapper           | 0.10.0  | Flatpak   |
+| Livi              | 0.4.0   | Flatpak   |
+| Celluloid         | 0.29-3  | Repo      |
+| Firefox           | 1.149   | Repo      |
+| Andromeda Firefox | 150     | Andromeda |
 
 ### H.264/AVC
 
 | Player            | 1080p@30    | 720p@30    |
 |-------------------|-------------|------------|
-| MPV               |         |  |
-| Clapper           |         |  |
-| Livi              |         |  |
-| Celluloid         |         |  |
-| Firefox           |         |  |
-| Andromeda Firefox |         |  |
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/cross.svg" alt="No")}} ¹    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Livi              | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
+¹ While plays smoothly it seems to have a stutter like if frames are sometimes played out of order
 
 ---
 ### H.265/HEVC
 
 | Player            | 1080p@30    | 720p@30    |
 |-------------------|-------------|------------|
-| MPV               |         |  |
-| Clapper           |         |  |
-| Livi              |         |  |
-| Celluloid         |         |  |
-| Firefox           |         |  |
-| Andromeda Firefox |         |  |
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Livi ¹            | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ¹ No video output at all
 
@@ -223,25 +227,29 @@ Below is a table of different video codecs and their playback performance. The h
 
 | Player            | 1080p@30    | 720p@30    |
 |-------------------|-------------|------------|
-| MPV               |         |  |
-| Clapper           |         |  |
-| Livi              |         |  |
-| Celluloid         |         |  |
-| Firefox           |         |  |
-| Andromeda Firefox |         |  |
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}} ¹    |
+| Livi              | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
+¹ While plays smoothly it seems to have a stutter like if frames are sometimes played out of order
+
 
 ---
 ### VP9
 
 | Player            | 1080p@30    | 720p@30    |
 |-------------------|-------------|------------|
-| MPV               |         |  |
-| Clapper           |         |  |
-| Livi              |         |  |
-| Celluloid         |         |  |
-| Firefox           |         |  |
-| Andromeda Firefox |         |  |
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Livi ¹            | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
+| Celluloid         | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Andromeda Firefox | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
+¹ No video output at all
 
 # Camera
 
