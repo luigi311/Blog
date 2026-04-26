@@ -331,10 +331,10 @@ Testing was done using the following settings:
 
 | Method                           | Battery Life | Drain Per Hour |
 |----------------------------------|-------------:|---------------:|
-| Screen on                        |     |           |
-| Screen on + Android              |     |           |
+| Screen on                        | 15.00 hours  |  6.67%         |
+| Screen on + Android              | 14.06 hours  |  7.11%         |
 | Screen on + Stress CPU           |     |           |
-| Screen on without sim            |     |            |
+| Screen on without sim            |     |           |
 
 ---
 
