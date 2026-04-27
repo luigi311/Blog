@@ -320,7 +320,7 @@ Testing was done using the following settings:
 - Without android unless specified
 - With sim unless specified
 - With Wifi enabled
-- Video playback is 720p 30 fps
+- Video playback is 720p 30 fps no audio
 - Charge time tested on pinepower v1 desktop
 - Prometheus polling
   - Standard: every 15 seconds
@@ -333,7 +333,7 @@ Testing was done using the following settings:
 |----------------------------------|-------------:|---------------:|
 | Screen on                        | 15.00 hours  |  6.67%         |
 | Screen on + Android              | 14.06 hours  |  7.11%         |
-| Screen on + Stress CPU           |     |           |
+| Screen on + Stress CPU           | 5.70 hours   |  17.54%        |
 | Screen on without sim            |     |           |
 
 ---
@@ -362,13 +362,13 @@ Testing was done using the following settings:
 
 | Method                           | Charging Time |
 |----------------------------------|--------------:|
-| Charge 0-80%                     |       |
+| Charge 0-80%                     |  95 mins      |
 
 ### Charging Curve
 
 - Measured from Sonoff S31 running esphome
 
-{{ resize_image(path="/furilabs-flx1/Charge_Curve.png", width=1080, alt="FX1s Battery charging curve") }}
+{{ resize_image(path="/furilabs-flx1s/Charge_Curve.png", width=1080, alt="FX1s Battery charging curve") }}
 
 # Support
 
