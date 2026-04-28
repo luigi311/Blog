@@ -284,26 +284,26 @@ Flashlights were pointed at the ceiling and everything left on auto, Pixel 9 and
 
 ## Normal Temp Medium Light
 
-| FLX1s | Pixel 9| iPhone 12 |
-|------|---------|-----------|
+| FLX1s | Pixel 9 | iPhone 12 |
+|:-----:|:-------:|:---------:|
 |   | {{ resize_image(path="/camera/Pixel_9_Normal_Temp_Medium_Lux.jpg", width=300, alt="pixel 9 B35AM 5000k Medium Light") }} | {{ resize_image(path="/camera/Iphone_12_Normal_Temp_Medium_Lux.jpg", width=360, alt="iPhone 12 B35AM 5000k Medium Light") }} |
 
 ## Normal Temp Low Light
 
 | FLX1s | Pixel 9 | iPhone 12 |
-|------|---------|-----------|
+|:-----:|:-------:|:---------:|
 |  | {{ resize_image(path="/camera/Pixel_9_Normal_Temp_Low_Lux.jpg", width=300, alt="pixel 9 B35AM 5000k Low Light") }} | {{ resize_image(path="/camera/Iphone_12_Normal_Temp_Low_Lux.jpg", width=360, alt="iPhone 12 B35AM 5000k Low Light") }} |
 
 ## Low Temp Medium Light
 
 | FLX1s | Pixel 9 | iPhone 12 |
-|:----:|:-------:|:---------:|
+|:-----:|:-------:|:---------:|
 |  | {{ resize_image(path="/camera/Pixel_9_Low_Temp_Medium_Lux.jpg", width=300, alt="pixel 9 519a 3500K DD Medium Light") }} | {{ resize_image(path="/camera/Iphone_12_Low_Temp_Medium_Lux.jpg", width=360, alt="iPhone 12 519a 3500K DD Medium Light") }} |
 
 ## Low Temp Low Light
 
 | FLX1s | Pixel 9 | iPhone 12 |
-|:----:|:-------:|:---------:|
+|:-----:|:-------:|:---------:|
 |  | {{ resize_image(path="/camera/Pixel_9_Low_Temp_Low_Lux.jpg", width=300, alt="pixel 9 519a 3500K DD Low Light") }} | {{ resize_image(path="/camera/Iphone_12_Low_Temp_Low_Lux.jpg", width=360, alt="iPhone 12 519a 3500K DD Low Light") }} |
 
 
