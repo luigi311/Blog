@@ -325,7 +325,6 @@ Testing was done using the following settings:
 - Prometheus polling
   - Standard: every 15 seconds
   - Standby: every 30 minutes
-  - Charging: every 5 seconds
 
 ## Screen Time
 
@@ -344,7 +343,7 @@ Testing was done using the following settings:
 |----------------------------------|-------------:|---------------:|
 | MPV                              | 8.40 hours   | 11.90%         |
 | Firefox                          | 8.62 hours   | 11.61%         |
-| Andromeda Firefox                |     |           |
+| Andromeda Firefox                | 8.67 hours   | 11.54%         |
 
 ---
 
