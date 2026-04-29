@@ -343,7 +343,7 @@ Testing was done using the following settings:
 | Method                           | Battery Life | Drain Per Hour |
 |----------------------------------|-------------:|---------------:|
 | MPV                              | 8.40 hours   | 11.90%         |
-| Firefox                          |     |           |
+| Firefox                          | 8.62 hours   | 11.61%         |
 | Andromeda Firefox                |     |           |
 
 ---
