@@ -328,6 +328,6 @@ This is a great device for the price when you consider both performance and supp
 
 # My Involvement / Disclosures
 
-I've followed Bardia, the CEO, development over the years across different devices prior to founding FuriLabs, while he was working on Droidian. While he was working on droidian, I financially donated to him in order for him to acquire hardware.
+I've followed Bardia, one of the engineers, development over the years across different devices prior to founding FuriLabs, while he was working on Droidian. During his droidian time, I financially donated to him in order for him to acquire hardware.
 
 The FLX1 was purchased with my own money and I was the first one to official purchase a device from them. I did feel confident purchasing the device when they first opened up and their promise for support because of my connection and good experience with Bardia. I minimally contribute to their development, mostly on the user side of things like their gallery app and andromeda system. Everything ive contributed on the software side is open in my [Github](https://github.com/luigi311) and tagged as such on their official repos. I also currently participate in their software QA testing prior to its public release when I have time.
