@@ -46,6 +46,7 @@
   $icon-youtube: false,
   $icon-peertube: false,
   $icon-researchgate: false,
+  $icon-telegram: false,
 
   //$icon-x: true,// x symbol, used to close search results page.
   //$icon-search: true,//search, spyglass search button in search box.
@@ -153,10 +154,10 @@
   //$enable-semantic-container: true,
 
   /// Enable responsive typography, Fixed root element size if disabled
-  $enable-responsive-typography: true,
+  //$enable-responsive-typography: true,
 
   /// Enable responsive spacings for <header>, <main>, <footer>, <section>
-  $enable-responsive-spacings: true,
+  //$enable-responsive-spacings: false,
 
   /// Enable a centered viewport for <header>, <main>, <footer> inside <body>
   /// This option will only work if $enable-maxwidth: false
@@ -193,6 +194,7 @@
   //$misc: false,
   //$grid: true,//Infinity Grid, column based layouts.
   //$syntax: true,//syntax highlighting for code blocks
+  //$coderoundhighlight: false,//round corners on highlighted code blocks
 );
 @use "extra";
 /******************************************************************************
@@ -204,15 +206,3 @@
  *****************************************************************************/
 //@use "fonts/Roboto";
 //@use "fonts/Arimo";
-
-
-/******************************************************************************
- *     CUSTOM CSS - Add your custom CSS below
-  *****************************************************************************/
-
-// Reduce table padding
-table {
-  th, td {
-    padding: 0.2em;
-  }
-}

@@ -1,3 +1,10 @@
 /******************************************************************************
  *   Extra - Put your extra SASS/CSS here, it will get bundled with abridge.css
  *****************************************************************************/
+
+// Reduce table padding
+table {
+  th, td {
+    padding: 0.2em;
+  }
+}
