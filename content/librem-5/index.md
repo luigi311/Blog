@@ -12,9 +12,9 @@ toc = true
 series = "Phones"
 +++
 
-- Performance: /5
+- Performance: 2/5 (Limited by GPU drivers)
 - Affordability: 
-- Compatibility: /5
+- Compatibility: 4/5
 - Battery Life: /5
 
 # Setup information
@@ -83,7 +83,7 @@ Other OS seem to have very little support with [PostmarketOS](https://wiki.postm
 
 # Android
 
-Android support is handled by a minimal [downstream waydroid](https://source.puri.sm/Librem5/debs/waydroid) built on top waydroid 1.6.1 which is from Dec 2025 so not to far behind upstream. Setting it up is as simple as installing Waydroid from the PureOS Store, launching it and tapping the Download button with the default options. With the limited EMMC on the standard L5 though its very easy to blow through it all with the android system setup and running. 
+Android support is handled by a minimal [downstream waydroid](https://source.puri.sm/Librem5/debs/waydroid) built on top waydroid 1.6.1 which is from Dec 2025 so not to far behind upstream. Setting it up is as simple as installing Waydroid from the PureOS Store, launching it and tapping the Download button with the default options. With the limited EMMC space on the standard L5 though its very easy to blow through all your free space with the android system setup and running. 
 
 Waydroid itself does not integrate with the system in any way so theres no settings for it in the gnome settings app but [waydroid-helper](https://github.com/ayasa520/waydroid-helper) seems to work when installed following their debian 12 instructions. Notifications also seem to work so it makes it nice if you are running android only messaging apps in the background.
 
@@ -116,11 +116,14 @@ Leaving it running will eat up limited resources so its best to keep it off, luc
 
 # Docking
 
-The L5 is pretty docker friendly as they support DP-ALT mode and they [themselves push](https://puri.sm/products/lapdock-kit/) a kit with Next Computer Nexdock lapdock system.
+The L5 is pretty docker friendly as they support DP-ALT mode and they [themselves push](https://puri.sm/products/lapdock-kit/) a kit with Next Computer Nexdock lapdock system. I can't seem to get miracast via gnome network displays to work but it does seem like the wireless card itself is atleast capabile of doing p2p but gnome network displays complains about screencasting portal is unavailable even with xdg-desktop-portal-wlr and xdg-desktop-portal-gtk both installed and pipewire running so not sure if there is something else that is missing in crimson or its just a version issue as gnome-network-displays is version 0.90.5 which dates back to 2021.
+
+Docking via DP-ALT mode works and is relatively smooth as long as the hardware itself is able to keep up with the rendering. Connecting to the NexDock seems to work great except for the touch screen where instead of the touchscreen mapping to what is displayed on the NexDock itself, its mapping it to what is on the phone screen itself only even if you disable the phone screen so usage/navigation is limited to keyboard and mouse only.
 
 
 # Web Browsing
 
+Web browsing on the L5 seems to mostly depend on the browser you are using and how heavy the website is. Firefox and Epiphany are really slow to the point where it is painful to use and you can not watch youtube comfortably even when at 144p. Angelfish while has way better performance to the point where you can atleast watch a youtube video, seems to run into other issues where websites are not sizing correctly so you have a side scroll and occasionally it has display rendering hiccups where it will display cyan blue pixels. Even with those issues though the performance is so much better on angelfish that its worth dealing with them over firefox/epiphany.
 
 | Browsers          | Version  | Toolkit      | Install   |
 | ----------------- | -------- | ------------ | --------- |
@@ -141,23 +144,24 @@ The L5 is pretty docker friendly as they support DP-ALT mode and they [themselve
 
 ## WebGL Aquarium
 
-| Fish amount | Firefox | Epiphany | Waydroid Firefox |
-| ----------- | ------- | -------- | ----------------- |
-| 100         |  |        |            |
-| 500         |  |        |            |
-| 1,000       |  |        |            |
-| 5,000       |  |        |            |
-| 10,000      |  |        |            |
-| 15,000      |  |        |            |
-| 20,000      |  |        |            |
-| 25,000      |  |        |            |
-| 30,000      |  |        |            |
+Aquarium currently doesn't work due to the incomplete GLES 3 so hopefully this improves in the future.
 
-¹ Estimated range as the fps seemed to fluctuate a lot while running making it hard to see actual numbers
+| Fish amount | Firefox | Epiphany | Waydroid Firefox  |
+| ----------- | ------- | -------- | ----------------- |
+| 100         | N/A     | N/A      | N/A               |
+| 500         | N/A     | N/A      | N/A               |
+| 1,000       | N/A     | N/A      | N/A               |
+| 5,000       | N/A     | N/A      | N/A               |
+| 10,000      | N/A     | N/A      | N/A               |
+| 15,000      | N/A     | N/A      | N/A               |
+| 20,000      | N/A     | N/A      | N/A               |
+| 25,000      | N/A     | N/A      | N/A               |
+| 30,000      | N/A     | N/A      | N/A               |
+
 
 # Media Playback
 
-Below is a table of different video codecs and their playback performance. The hardware has support for decoding h264/h265/vp9 and they are working on adding in the software support necessary. The best results for native seem to come from MPV/Celluloid/firefox so as long as you are using any of those performance should be fine and inline with each other.
+Below is a table of different video codecs and their playback performance. The hardware has support for decoding h264/h265/vp9 and they are working on adding in the software support necessary. The best results for native seem to come from MPV/Celluloid so as long as you are using any of those performance should be fine and inline with each other.
 
 ### Player Information
 
@@ -174,10 +178,10 @@ Below is a table of different video codecs and their playback performance. The h
 
 | Player            | 1080p@30                                       | 720p@30                                        |
 | ----------------- | ---------------------------------------------- | ---------------------------------------------- |
-| MPV               | |  |
-| Clapper           | |  |
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Livi              | |  |
-| Celluloid         | |  |
+| Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Firefox           | |  |
 | Waydroid Firefox  | |  |
 
@@ -187,10 +191,10 @@ Below is a table of different video codecs and their playback performance. The h
 
 | Player            | 1080p@30                                       | 720p@30                                        |
 | ----------------- | ---------------------------------------------- | ---------------------------------------------- |
-| MPV               |  |  |
-| Clapper           |  |  |
+| MPV               | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Livi              |  |  |
-| Celluloid         |  |  |
+| Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Firefox           |  |  |
 | Waydroid Firefox  |  |  |
 
@@ -200,10 +204,10 @@ Below is a table of different video codecs and their playback performance. The h
 
 | Player            | 1080p@30                                       | 720p@30                                        |
 | ----------------- | ---------------------------------------------- | ---------------------------------------------- |
-| MPV               |  |  |
-| Clapper           |  |  |
+| MPV               | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Livi              |  |  |
-| Celluloid         |  |  |
+| Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Firefox           |  |  |
 | Waydroid Firefox  |  |  |
 
@@ -213,10 +217,10 @@ Below is a table of different video codecs and their playback performance. The h
 
 | Player            | 1080p@30                                       | 720p@30                                        |
 | ----------------- | ---------------------------------------------- | ---------------------------------------------- |
-| MPV               |  |  |
-| Clapper           |  |  |
+| MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Clapper           | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Livi              |  |  |
-| Celluloid         |  |  |
+| Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Firefox           |  |  |
 | Waydroid Firefox  |  |  |
 
