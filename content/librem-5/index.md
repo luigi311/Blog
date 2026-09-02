@@ -1,7 +1,7 @@
 +++
 title = "Purism Librem 5"
 description = "Review of the Purism Librem 5, going over its features and limitations."
-date = 2026-07-25
+date = 2026-09-02
 draft = false
 
 [taxonomies]
@@ -12,8 +12,8 @@ toc = true
 series = "Phones"
 +++
 
-- Performance: 2/5 (Limited by GPU drivers)
-- Affordability: 
+- Performance: 2/5 (Limited by WIP GPU drivers)
+- Affordability: Expensive for what it is and provides compared to others
 - Compatibility: 4/5
 - Battery Life: /5
 
@@ -27,6 +27,8 @@ series = "Phones"
 # Introduction
 
 The Purism librem 5 is an interesting phone with a troubled past that it's trying to move ahead from. During their intial sale/preorder customers were waiting for years until their devices were shipping and during that time they were getting the run around in terms of shipping and refunds. For me I ordered my Librem 5 refurbished way after on October 11, 2023 and it was shipped out October 12, 2023 as they were refurbished in stock. I think they current have Librem 5s in stock so you shouldn't be running into that same issue the preorder folks ran into. The librem 5 itself is a nice feeling but heavy and thick phone with it being my thickest device even compared to other devices in full cases so its important to keep in mind. It was also one of the first linux first phones similar to the pinephones and even has kill switches like the pinephones but these kill switches are infinitely more useful as they are accessable externally without having to remove the back cover and requiring tweezers to confidenly switch. These are on the side of the phone and are really nice and easy to toggle on and off. Another phone with similar external kill switches is the FuriLabs FLX1s but I would consider the L5 kill switchs to be in another class compared to the FLX1s in terms of feel and finish.
+
+The Pinephone revolutionized the community side of mobile linux with them releasing a cheap platform that open source developers can utilize to develop the mobile linux environment but they did not provide any software development themselves so if something was missing drivers/support it was up to the community to figure it out. Purism revolutionized the manufacturer/vendor side of mobile linux which massively pushed the ecosystem forward as they were able to bring in focus as they were pushing software solutions to problems that their customers were running into that software did not exist for or was lacking. 
 
 # Hardware Supported
 
@@ -363,6 +365,15 @@ As it currently stands Purism does seem to be focusing on continued development 
 
 # Conclusion
 
+The Librem 5 is a tricky device, it's great at what it does, it's really awful at what it doesn't do, its future was really negative at some points in its life but it's currently looking as best as it ever has been. 
+
+While it's hard to recommend a product based on what the future might be for it, its even harder to recommend a device with not even a potential future such as the Pinephone (Pro) at this point. As of right now atleast the L5 has a potential positive future with vendor support at a high point and 3rd party graphics driver development really hitting its strides right now making leaps and bounds and its work making its way upstream. 
+
+As things currently stand right now, I think purchasing the L5 should only be done if you are looking for a way to fund its future development. To tell purism that you are interested in the work they are doing and want to financially support them so they do not stop their work. This was the only reason I purchased my L5 and chose to do so directly from them so the money goes straight to them and is why I am also subscribed to their $10 PureOS subscription since May 2026.
+
+If you are currently in the market for a new mobile linux device, there are now a few way better devices that provide better performance for the price and also include vendor provided support one way or another so I would recommend to look more for those devices first a tthis point and only fall back to the L5 if it provides a niche usecase that the other devices to not meet. Up until the last couple of years it was hard to recommend any of the other devices because there were very few that fit the bill of being able to make phone calls on your phone, but things have recently been changing with more and more having a more reliable ceullar stack and actually supporting VoLTE so it could even make calls in the US, so it is no longer just the pinephones and the librem 5 only at this point that can be used as actual cellphones. 
 
 
 # My Involvement / Disclosures
+
+My involvement with Librem 5/purism is very minimal, i've interacted with the developers a few times over social media. I do financially support purism with the PureOS $10/month subcription and hope to see them succeed in the future. The L5 was purchased refurbished with my own money.
