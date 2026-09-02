@@ -26,7 +26,7 @@ series = "Phones"
 
 # Introduction
 
-The Purism librem 5 is an interesting phone with a troubled past that it's trying to move ahead from.  
+The Purism librem 5 is an interesting phone with a troubled past that it's trying to move ahead from. During their intial sale/preorder customers were waiting for years until their devices were shipping and during that time they were getting the run around in terms of shipping and refunds. For me I ordered my Librem 5 refurbished way after on October 11, 2023 and it was shipped out October 12, 2023 as they were refurbished in stock. I think they current have Librem 5s in stock so you shouldn't be running into that same issue the preorder folks ran into. The librem 5 itself is a nice feeling but heavy and thick phone with it being my thickest device even compared to other devices in full cases so its important to keep in mind. It was also one of the first linux first phones similar to the pinephones and even has kill switches like the pinephones but these kill switches are infinitely more useful as they are accessable externally without having to remove the back cover and requiring tweezers to confidenly switch. These are on the side of the phone and are really nice and easy to toggle on and off. Another phone with similar external kill switches is the FuriLabs FLX1s but I would consider the L5 kill switchs to be in another class compared to the FLX1s in terms of feel and finish.
 
 # Hardware Supported
 
@@ -45,7 +45,7 @@ The Purism librem 5 is an interesting phone with a troubled past that it's tryin
 
 ¹ Not hardware but important usability feature and is optional
 
-² Support exists but not included by default
+² Support exists but not included by default but it is possible
 
 Some hardware is a grouping as those are all functions handled by a single sensor on the device and exposed as different metrics.
 
@@ -62,24 +62,24 @@ Light Speed (Tmobile) seems to work great without any issues. The Librem 5 only 
 |  Phone    | Tech | Speedtest down | Fast down | Fast up  |                  VoLTE / VoNR                  |
 | :-------: | :--: | :------------: | :-------: | :------: | :--------------------------------------------: |
 | L5        |  4G  |       |    |  |  |
-| Pixel 6   |  5G  |   53.8 Mbps    |  45 Mbps  | 30 Mbps  |   {{ img(src="/icons/cross.svg" alt="No")}}    |
-| Pixel 6   |  4G  |   81.9 Mbps    |  65 Mbps  | 12 Mbps  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Pixel 6   |  5G  |      |    |    |   {{ img(src="/icons/cross.svg" alt="No")}}    |
+| Pixel 6   |  4G  |      |    |    | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 # Performance
 
 Performance on the L5 is kinda tricky currently. 
 
-The CPU itself is not terrible i would still consider it on the lower end of the spectrum in terms of usable in today's day and age with how heavy things are getting. The 3GB of RAM is also on the limiting side of things though both the CPU+RAM should be enough if you are running lighter apps and avoid heavy websites or have lots of tabs open.
+The CPU itself is not terrible, I would still consider it on the lower end of the spectrum in terms of usable in today's day and age with how heavy things are getting especially with more and more AI developed applications/websites instead of the handcrafted artisanal development. The 3GB of RAM is also on the limiting side of things though both the CPU+RAM should be enough if you are running lighter apps and avoid heavy websites or have lots of tabs open.
 
-The GPU though is where things get tricky, the driver stack, etnaviv, itself is still being working trying to bring GLES3. The problem with Crimson though is its a stable distro that is locked in time so it is stuck with the mesa version from 2023 plus whatever was backported. This should improve come the next OS version, dawn, which will bring mesa itself forward many years as it is built on debian 13 trixie. The good thing is the current mesa version does have some of etnaviv GLES3 improvements so it can be test/enabled via `MESA_GLES_VERSION_OVERRIDE=3.1` environment variable though results will vary in terms of graphical issues and/or crashes due to it not being to spec yet. Upstream GLES3 progress can be tracked at [mesamatrix](https://mesamatrix.net/) under the OpenGL ES etnaviv sections.
+The GPU though is where things get tricky, the driver stack, etnaviv, itself is still being worked on trying to bring GLES3. The problem with Crimson though is its a stable distro that is locked in time so it is stuck with the mesa version from 2023 plus whatever was backported. This should massively improve come the next OS version, dawn, which will bring mesa itself forward many years as it is built on debian 13 trixie. The good thing is the current mesa version does have some of etnaviv GLES3 improvements so it can be test/enabled via `MESA_GLES_VERSION_OVERRIDE=3.1` environment variable though results will vary in terms of graphical issues and/or crashes due to it not being to spec yet. Upstream GLES3 progress can be tracked at [mesamatrix](https://mesamatrix.net/) under the OpenGL ES etnaviv sections and should give you a feel for what the L5 is capable of in the future.
 
-Performance in non3d application is really smooth and responsive. Weirdly enough the L5 is the most responsive device I have testing in terms of responding to inputs where as every other device seems to have a miniscule delay to it. Once the GLES3 driver is in a good enough state to be used by default this will make a really good device to be used as long as you are not doing anything compute heavy and assuming that GLES3 enablement doesen't bring in the tiny delay that I feel on other devices.
+Performance in non-3d application is really smooth and responsive. Weirdly enough the L5 is the most responsive device I have testing in terms of responding to inputs where as every other device seems to have a miniscule delay to it. Once the GLES3 driver is in a good enough state to be used by default this will make a really good device to be used as long as you are not doing anything compute heavy and assuming that GLES3 enablement doesen't bring in the tiny delay that I feel on other devices. When not doing intesive things the phone itself is a joy to use as it is really responsive but it all falls apart and is frustrating once it leaves its performance/gpu thresholds.
 
 # Compatibility
 
-Purism and in particular [Sebastian Kryzszkowiak](https://social.librem.one/@dos) has done a great job in getting the L5 into a great spot both downstream and even upstream in the linux kernel. With the upstream etnaviv work being done and with a heavy push recently it should hopefully mean better GLES 3 support so it will not run into the same compatability issues that the original Pinephone runs into where certain apps are not supported and/or runs slowly. Vulkan support is in a similar situation as GLES3 where technically the GPU itself supports it but driver are missing/lacking so there is no current way to use vulkan. The CPU is also similar to the one going to be used by the upcoming Mecha Comet so hopefully that also means improved upstream mainline support down the line as mecha commet seeems to be prioritizing mainline. 
+From the kernel side, purism and in particular [Sebastian Kryzszkowiak](https://social.librem.one/@dos) has done a great job in getting the L5 into a great spot both downstream and even upstream. With the upstream etnaviv work being done by 3rd party developer [Christian Gmeiner](https://mastodon.social/@austriancoder@fosstodon.org) and with their heavy push recently it should hopefully mean better GLES 3 support so it will not run into the same compatability issues that the original Pinephone runs into where certain apps are not supported and/or runs slowly. Vulkan support is in a similar situation as GLES3 where technically the GPU itself supports it but driver are missing/lacking so there is no current way to use vulkan and I am not familiar if anyone is working on mesa vulkan support similar to what christian is doing for GLES3 but luckily GLES3 should cover a lot of the usecases. The CPU is also similar to the one going to be used by the upcoming Mecha Comet so hopefully that also means improved upstream mainline support down the line as the Mecha team seeems to be prioritizing mainline support and not downstream only. 
 
-Other OS seem to have very little support with [PostmarketOS](https://wiki.postmarketos.org/wiki/Purism_Librem5_(purism-librem5)) seeming to be the only 3rd party OS port that I know of that is actually still being actively maintained. The big benefit of PostmarketOS is that it brings with it a much more recent mesa so it lets you play more with the etnaviv improvements to see a glimps of what the L5 hardware is capable of and should hopefully be like in future PureOS releases such as dawn and onwards.
+Other OS seem to have very little support with [PostmarketOS](https://wiki.postmarketos.org/wiki/Purism_Librem5_(purism-librem5)) seeming to be the only 3rd party OS port that I know of that is actually still being actively maintained. The big benefit of PostmarketOS is that it brings with it a much more recent mesa so it lets you play more with the etnaviv improvements to see a glimps of what the L5 hardware is capable of and should hopefully be like in future PureOS releases such as dawn and onwards. As far as I know there should be much in terms of limiting other OS from being ported to the L5 but it might have trouble attracting other developers that are willing to take that work on due to how expensive the L5 itself is for what it offers in terms of performance today.
 
 # Android
 
@@ -116,9 +116,9 @@ Leaving it running will eat up limited resources so its best to keep it off, luc
 
 # Docking
 
-The L5 is pretty docker friendly as they support DP-ALT mode and they [themselves push](https://puri.sm/products/lapdock-kit/) a kit with Next Computer Nexdock lapdock system. I can't seem to get miracast via gnome network displays to work but it does seem like the wireless card itself is atleast capabile of doing p2p but gnome network displays complains about screencasting portal is unavailable even with xdg-desktop-portal-wlr and xdg-desktop-portal-gtk both installed and pipewire running so not sure if there is something else that is missing in crimson or its just a version issue as gnome-network-displays is version 0.90.5 which dates back to 2021.
+The L5 is pretty docking friendly as they support DP-ALT mode and they [themselves push a kit](https://puri.sm/products/lapdock-kit/) with Nex Computer Nexdock lapdock system. I can't seem to get miracast via gnome network displays to work but it does seem like the wireless card itself is atleast capabile of doing p2p but gnome network displays complains about screencasting portal is unavailable even with xdg-desktop-portal-wlr and xdg-desktop-portal-gtk both installed and pipewire running so not sure if there is something else that is missing in crimson or its just a version issue as gnome-network-displays is version 0.90.5 which dates back to 2021.
 
-Docking via DP-ALT mode works and is relatively smooth as long as the hardware itself is able to keep up with the rendering. Connecting to the NexDock seems to work great except for the touch screen where instead of the touchscreen mapping to what is displayed on the NexDock itself, its mapping it to what is on the phone screen itself only even if you disable the phone screen so usage/navigation is limited to keyboard and mouse only.
+Docking via DP-ALT mode works and is relatively smooth as long as the hardware itself is able to keep up with the rendering. Connecting to the NexDock works instantly but has issues with the touch screen where instead of the touchscreen mapping to what is displayed on the NexDock itself, its mapping it to the phone screen itself even if you disable the phone screen so usage/navigation is limited to keyboard and mouse only. Phosh docking experience on the included version, 0.34.0 dating back to December 2023, is also not great but hopefully that will improve in future releases of phosh. Other DE may have a better portable and docking experience but since Pureos only supports phosh that is what you are stuck with in terms of support but would be interesting to see what docking would look like on other DEs in PMOS especially once GLES3 is fleshed out.
 
 
 # Web Browsing
@@ -161,18 +161,18 @@ Aquarium currently doesn't work due to the incomplete GLES 3 so hopefully this i
 
 # Media Playback
 
-Below is a table of different video codecs and their playback performance. The hardware has support for decoding h264/h265/vp9 and they are working on adding in the software support necessary. The best results for native seem to come from MPV/Celluloid so as long as you are using any of those performance should be fine and inline with each other.
+Below is a table of different video codecs and their playback performance. The best results for native seem to come from MPV though 1080p support seems to be at the upper limit so i would try to limit everything to 720p at most and at that point most players are able to handle it.
 
 ### Player Information
 
-| Player            | Version | Method    |
-| ----------------- | ------- | --------- |
-| MPV               |   | Repo      |
-| Clapper           |   | Flatpak   |
-| Livi              |   | Flatpak   |
-| Celluloid         |   | Repo      |
-| Firefox           |   | Repo      |
-| Waydroid Firefox  |   | Waydroid  |
+| Player            | Version  | Method    |
+| ----------------- | -------- | --------- |
+| MPV               | 0.35.1   | Repo      |
+| Clapper           | 0.10.0   | Flatpak   |
+| Livi              | 0.0.3    | Repo      |
+| Celluloid         | 0.20     | Repo      |
+| Firefox           | 140.13.0 | Repo      |
+| Waydroid Firefox  | 153.0    | Waydroid  |
 
 ### H.264/AVC
 
@@ -180,23 +180,25 @@ Below is a table of different video codecs and their playback performance. The h
 | ----------------- | ---------------------------------------------- | ---------------------------------------------- |
 | MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Livi              | |  |
+| Livi              | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Firefox           | |  |
-| Waydroid Firefox  | |  |
+| Firefox           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Waydroid Firefox  | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ---
 
 ### H.265/HEVC
 
-| Player            | 1080p@30                                       | 720p@30                                        |
-| ----------------- | ---------------------------------------------- | ---------------------------------------------- |
-| MPV               | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
-| Livi              |  |  |
-| Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Firefox           |  |  |
-| Waydroid Firefox  |  |  |
+| Player            | 1080p@30                                           | 720p@30                                            |
+| ----------------- | -------------------------------------------------- | -------------------------------------------------- |
+| MPV               | {{ img(src="/icons/cross.svg" alt="No")}}          | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| Clapper           | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+| Livi ¹            | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
+| Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}          | {{ img(src="/icons/cross.svg" alt="No")}}          |
+| Firefox           | {{ img(src="/icons/cross.svg" alt="No")}}          | {{ img(src="/icons/cross.svg" alt="No")}}          |
+| Waydroid Firefox  | {{ img(src="/icons/cross.svg" alt="No")}}          | {{ img(src="/icons/checkmark.svg" alt="Yes")}}     |
+
+¹ Performs well but has some minor rendering issues
 
 ---
 
@@ -206,10 +208,10 @@ Below is a table of different video codecs and their playback performance. The h
 | ----------------- | ---------------------------------------------- | ---------------------------------------------- |
 | MPV               | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper           | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Livi              |  |  |
+| Livi              | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Firefox           |  |  |
-| Waydroid Firefox  |  |  |
+| Firefox           | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Waydroid Firefox  | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 ---
 
@@ -219,10 +221,10 @@ Below is a table of different video codecs and their playback performance. The h
 | ----------------- | ---------------------------------------------- | ---------------------------------------------- |
 | MPV               | {{ img(src="/icons/checkmark.svg" alt="Yes")}} | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 | Clapper           | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Livi              |  |  |
+| Livi              | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
 | Celluloid         | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/cross.svg" alt="No")}}      |
-| Firefox           |  |  |
-| Waydroid Firefox  |  |  |
+| Firefox           | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| Waydroid Firefox  | {{ img(src="/icons/cross.svg" alt="No")}}      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
 
 
 # Camera
@@ -230,17 +232,18 @@ Below is a table of different video codecs and their playback performance. The h
 
 | Library        |                                      Supported |
 | -------------- | ---------------------------------------------: |
-| Libcamera      | |
-| Droidmedia     | |
-| CameraProvider | |
+| Libcamera      | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+| LibMegapixels  | {{ img(src="/icons/checkmark.svg" alt="Yes")}} |
+
 
 | Abstraction Layer |                                      Supported |
 | ----------------- | ---------------------------------------------: |
-| LibMegapixels     |  |
 | v4l2              |  |
 | Gstreamer         |  |
 | Qcamera           |  |
-| Pipewire          |  |
+| Pipewire ¹         | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
+
+¹ Possible but not enabled out of the box in crimson https://forums.puri.sm/t/lib-rem5-camera-to-use-everywhere/28090/22
 
 ## Example
 
@@ -341,6 +344,21 @@ Testing was done using the following settings:
 
 # Support
 
+Support for the L5 has had its ups and downs over the years wiplashing from one extreme to the other. 
+
+The L5 had an atrocious launch with the entire preorder/delay fiasco. This soured all forms of support for purism and the L5 and is responsible for a lot of the current negative sentiment towards the L5.
+
+Once it was released support seemed to be on the good side with lots of software development happening to get things to a usable state in terms of making applications mobile friendly and development new applications. Lots of work was also making their way upstream to applications and the linux kernel and lead to lots of improvements into the entire mobile linux ecosystem. 
+
+Then we hit a massive rough spot with a really long period where software development basically came to a complete halt. There was very little happening in terms of software development and it seems like the entire software development team was actually let go with no signs of any of them returning.
+
+In 2024 Purism added their PureOS subscription to optionally help them fund the development of PureOS and work on their next release crimson. At this point blog post after blog post of their development reports continued to come out and they were making progress, slowly but progress was being made and things were being redesigned.
+
+Finally in mid 2026 PureOS released their next L5 OS, crimsion, which is based on Debian 12 Bookworm, bringing application releases from 2021 to 2023 so now its only 3 years behind instead of the now 5 years behind we were stuck with.
+
+Luckily since then it seems like they have been full steam ahead to their next debian rebase for PureOS dawn built on top of Debian 13 trixie which will hopefully bring software up to the current year of 2026 and hopefully its release isn't so delayed like crimson was that by the time it releases it will be massively out of date too. 
+
+As it currently stands Purism does seem to be focusing on continued development of the L5 but with such a massive swings back and forth its hard to tell how long their motivation will continue. The good thing is, they do have a strong focus on upstreaming their kernel development which is the most important piece of this and that means that down the line any OS could potentially add in L5 support and handle the OS side of things and keeping that part of the system up to date. They are also one of the few linux first mobile device company that is actually handling the software development internally and publishing their development out to the greater mobile linux ecosystem.
 
 
 # Conclusion
