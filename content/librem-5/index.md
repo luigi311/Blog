@@ -231,6 +231,7 @@ Below is a table of different video codecs and their playback performance. The b
 
 # Camera
 
+Camera on the L5 is in a pretty good spot right now compared to other linux phones when going through millipixels, their own downstream camera application. Sebastian/dos has done really great work on the postprocessing side of things to get this useful in everyday life with colors all looking great and processing speed being the fastest on non-isp based camera stacks, fast enough to not be annoying like it is with the initial PP/PPP megapixels implementations. You can find camera examples on [mastodon under #shotonlibrem5](https://mastodon.social/tags/shotonlibrem5) and I also took some on my trip to [Calsbad Caverns New Mexico](https://photos.luigi311.com/s/carlsbad-librem5) which stressed its low light performance. On my trip, focus wasn't always great since auto finding the maximum focus point can sometimes be slow but when things are in focus the pictures come out great!
 
 | Library        |                                      Supported |
 | -------------- | ---------------------------------------------: |
@@ -243,7 +244,7 @@ Below is a table of different video codecs and their playback performance. The b
 | v4l2              |  |
 | Gstreamer         |  |
 | Qcamera           |  |
-| Pipewire ¹         | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
+| Pipewire ¹        | {{ img(src="/icons/exclamation.svg" alt="Maybe")}} |
 
 ¹ Possible but not enabled out of the box in crimson https://forums.puri.sm/t/lib-rem5-camera-to-use-everywhere/28090/22
 
@@ -365,9 +366,9 @@ As it currently stands Purism does seem to be focusing on continued development 
 
 # Conclusion
 
-The Librem 5 is a tricky device, it's great at what it does, it's really awful at what it doesn't do, its future was really negative at some points in its life but it's currently looking as best as it ever has been. 
+The Librem 5 is a tricky device, it's great at what it does, it's really awful at what it doesn't do, its future was really negative at some points in its life but it's currently looking as best as it ever has been. Responsiveness is best in class even though its overall performance is not that great. The camera processing is also really good and fast allowing it to actually be useful out in the real world unlike other mainline linux devices which are lacking in terms of focus and color.
 
-While it's hard to recommend a product based on what the future might be for it, its even harder to recommend a device with not even a potential future such as the Pinephone (Pro) at this point. As of right now atleast the L5 has a potential positive future with vendor support at a high point and 3rd party graphics driver development really hitting its strides right now making leaps and bounds and its work making its way upstream. 
+While it's hard to recommend a product based on what the future might be for it, its even harder to recommend a device with not even a potential future such as the Pinephone (Pro) at this point. As of right now atleast the L5 has a potential positive future with vendor support at a high point and 3rd party graphics driver development really hitting its strides right now making leaps and bounds and its work making its way upstream. If the current momentum continues, the L5 will stand to become a really useful device in the mobile linux world even though it has aging hardware.
 
 As things currently stand right now, I think purchasing the L5 should only be done if you are looking for a way to fund its future development. To tell purism that you are interested in the work they are doing and want to financially support them so they do not stop their work and you support their mission/ethos. There have been talks for a long time about a refreshed L5, Fir/v2, and looks like it is still in the plans and is [currently in progress](https://forums.puri.sm/t/librem-5-fir-batch/9491/223) and I hope to hear something soon about it.
 
@@ -378,4 +379,4 @@ Up until the last couple of years it was hard to recommend any of the other devi
 
 # My Involvement / Disclosures
 
-My involvement with Librem 5/purism is very minimal, i've interacted with the developers a few times over social media. I do like purism as a company and what they stand for, when they are standing behind it, and as such I have purchased the Librem 5 directly from them with my own money and subscribe to their $10/month PureOS subscription to help them finanically continue development. I will also be purchasing their Librem 5 V2 so they continue to exist and develop in the mobile linux community.
+My involvement with Librem 5/purism is very minimal, i've interacted with the developers a few times over social media. I do like purism as a company and what they stand for, when they are standing behind it, and hope they continue to exist long into the future. As such I have purchased the Librem 5 directly from them with my own money for testing and subscribe to their $10/month PureOS subscription to help them finanically continue development. I will also be purchasing their Librem 5 V2, assuming it ever actually gets released and am excited to see what purism can accomplish with more modern hardware.
