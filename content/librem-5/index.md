@@ -296,6 +296,7 @@ Testing was done using the following settings:
 - Measured from 100% battery to device shutdown
 - Without android unless specified
 - With sim unless specified
+- Without sim is with modem switch disabled
 - With Wifi enabled
 - Video playback is 720p 30 fps no audio
 - Charge time tested on pinepower v1 desktop
@@ -310,7 +311,7 @@ Testing was done using the following settings:
 | Screen on              |   |          |
 | Screen on + Android    |   |          |
 | Screen on + Stress CPU |   |          |
-| Screen on without sim  |   |          |
+| Screen on without sim  | 5.51 hours   | 18.15%         |
 
 ---
 
@@ -325,6 +326,11 @@ Testing was done using the following settings:
 ---
 
 ## Standby
+
+- taken with [sleepwalk](https://github.com/luigi311/sleepwalk) enabled utilizing the default settings
+    - SLEEP_STEP=30
+    - SLEEP_MAX_SECS=600
+    - WAKE_SECS=30
 
 | Method              | Battery Life | Drain Per Hour |
 | ------------------- | -----------: | -------------: |
