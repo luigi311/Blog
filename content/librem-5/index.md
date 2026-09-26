@@ -309,7 +309,7 @@ Testing was done using the following settings:
 | Method                 | Battery Life | Drain Per Hour |
 | ---------------------- | -----------: | -------------: |
 | Screen on              | 5.00 hours   | 20.00%         |
-| Screen on + Android    |   |          |
+| Screen on + Android    | 4.30 hours   | 23.26%         |
 | Screen on + Stress CPU | 2.97 hours   | 33.71%         |
 | Screen on without sim  | 5.51 hours   | 18.15%         |
 
@@ -342,13 +342,19 @@ Testing was done using the following settings:
 
 ## Charging
 
+There doesnt seem to be a power_supply node_power_supply_present being exposed by the battery driver so prometheus isnt able to read what the battery percentage is so I just relied on checking every once in a while to see if the battery was at 80%. At low percentages it seems to charge at around 12-15w and then once it crosses a threshold it then charges at 10w before then ramping down as it gets more and more full. Also included what the heat looks like, it seems to get pretty toasty while charging so might be something to keep in mind if you are attempting to charge while also trying to do something intense.
+
 | Method       | Charging Time |
 | ------------ | ------------: |
-| Charge 0-80% |        |
+| Charge 0-80% | 154 mins      |
 
 ### Charging Curve
 
 - Measured from Sonoff S31 running esphome
+
+{{ resize_image(path="/librem-5/Charge_Curve.png", width=1080, alt="L5 Battery charging curve") }}
+
+{{ resize_image(path="/librem-5/Charge_Heat.png", width=1080, alt="L5 Battery charging curve") }}
 
 
 # Support
